@@ -1,0 +1,68 @@
+---
+title: "Apache Kafka and ksqlDB in Action: Let’s Build a Streaming Data Pipeline!"
+slug: "apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline-qIXVbF"
+date: 2020-10-19T08:00:00
+event: "All Things Open"
+location: "Virtual"
+image: "/images/qIXVbF/slide_000.jpg"
+pdf: "/pdfs/qIXVbF.pdf"
+notist_id: "qIXVbF"
+resources:
+  - title: "☁️Confluent Cloud"
+    url: "https://confluent.cloud/signup?utm_source=conference&utm_medium=slide&utm_campaign=ty.community.con.allthingsopen-2020-10-20&utm_term=rmoff-devx"
+    description: "Fully Managed Apache Kafka, Schema Registry, ksqlDB, and Connectors. Use promo code 60DEVADV to get an additional $60 of free Confluent Cloud usage. Be sure to activate it by Dec. 31, 2021, and to use it within 90 days after activation. Any unused promo value on the expiration date will be forfeited and there are a limited number of codes available, so don’t miss out!"
+  - title: "✍️ Streaming data from Oracle into Kafka"
+    url: "https://rmoff.dev/oracle"
+    description: "Blog about the options for getting data from Oracle into Kafka"
+  - title: "🎥 Integrating Oracle and Kafka"
+    url: "https://rmoff.dev/oracle-and-kafka"
+    description: "A conference talk covering the options for getting data from Oracle into Kafka"
+  - title: "📌Kafka as a Platform: the Ecosystem from the Ground Up"
+    url: "https://rmoff.dev/kafka101"
+    description: "Kafka 101 - introducing the concepts, the APIs, and the ecosystem"
+  - title: "👾Demo code"
+    url: "https://github.com/confluentinc/demo-scene/tree/master/build-a-streaming-pipeline"
+    description: "Try out the demo for yourself - all you need is Docker and Docker Compose."
+  - title: "📚Free eBooks"
+    url: "https://www.confluent.io/apache-kafka-stream-processing-book-bundle/?utm_source=conference&utm_medium=slide&utm_campaign=ty.community.con.allthingsopen-2020-10-20&utm_term=rmoff-devx"
+    description: "Free eBooks to download , including Kafka: The Definitive Guide."
+  - title: "ℹ️ Confluent Developer"
+    url: "http://developer.confluent.io?utm_source=conference&utm_medium=slide&utm_campaign=ty.community.con.allthingsopen-2020-10-20&utm_term=rmoff-devx"
+    description: "Tutorials, videos, blogs, podcasts, and more - all for developers working with Apache Kafka and Confluent Platform"
+  - title: "🎥 Kafka Connect tutorials on YouTube"
+    url: "http://rmoff.dev/youtube"
+  - title: "🧩 Confluent Hub"
+    url: "https://www.confluent.io/hub/?utm_source=conference&utm_medium=slide&utm_campaign=ty.community.con.allthingsopen-2020-10-20&utm_term=rmoff-devx"
+    description: "Huge list of connectors for Kafka Connect"
+  - title: "✍️ Blog - Building a Telegram Bot Powered by Apache Kafka and ksqlDB"
+    url: "https://www.confluent.io/blog/building-a-telegram-bot-powered-by-kafka-and-ksqldb/?utm_source=conference&utm_medium=slide&utm_campaign=ty.community.con.allthingsopen-2020-10-20&utm_term=rmoff-devx"
+    description: "A fun blog showing what you can do with ksqlDB and Kafka"
+  - title: "💬 Confluent Community Slack group"
+    url: "http://cnfl.io/slack"
+  - title: "📌 Introduction to ksqlDB"
+    url: "https://www.youtube.com/watch?v=7mGBxG2NhVQ"
+    description: "Learn all about ksqlDB in this 45 minute talk &amp; live demo"
+  - title: "📌From Zero to Hero with Kafka Connect"
+    url: "https://rmoff.dev/ljc-kafka-02"
+    description: "Learn all about Kafka Connect (including the connectors available with ksqlDB)"
+  - title: "📌The Changing Face of ETL: Event-Driven Architectures for Data Engineers"
+    url: "https://rmoff.dev/oredev19-changing-face-of-etl"
+  - title: "🚂On Track with Apache Kafka: Building a Streaming Platform solution with Rail Data"
+    url: "https://rmoff.dev/oredev19-on-track-with-kafka"
+    description: "Apache Kafka and Confluent Platform in Action! Using live streams of rail movement data in all sorts of useful ways for analysis and applications."
+embeds:
+  - type: "twitter"
+    html: |
+      <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">The experience of having a great speaker talking to your ears like... literally 🤣 <a href="https://t.co/frRhlz7NnM">pic.twitter.com/frRhlz7NnM</a></p>&mdash; Ricardo Ferreira (@riferrei) <a href="https://twitter.com/riferrei/status/1318632051009114112?ref_src=twsrc%5Etfw">October 20, 2020</a></blockquote>
+  - type: "twitter"
+    html: |
+      <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">All set for my <a href="https://twitter.com/hashtag/AllThingsOpen?src=hash&amp;ref_src=twsrc%5Etfw">#AllThingsOpen</a> <a href="https://twitter.com/AllThingsOpen?ref_src=twsrc%5Etfw">@AllThingsOpen</a> session starting in ten minutes. Still time to register if you want to attend 😀<a href="https://twitter.com/hashtag/speakerselfie?src=hash&amp;ref_src=twsrc%5Etfw">#speakerselfie</a> <a href="https://t.co/eOjUNvN5xt">pic.twitter.com/eOjUNvN5xt</a></p>&mdash; Robin Moffatt 🍻🏃🥓 (@rmoff) <a href="https://twitter.com/rmoff/status/1318618649402494978?ref_src=twsrc%5Etfw">October 20, 2020</a></blockquote>
+  - type: "twitter"
+    html: |
+      <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Really enjoyed the presentation, I am excited to learn new patterns of software architecture with event-driven streaming systems using Kafka. Thanks!</p>&mdash; 80sVideoStoreJunky (@8Junky) <a href="https://twitter.com/8Junky/status/1318670918068146182?ref_src=twsrc%5Etfw">October 20, 2020</a></blockquote>
+---
+
+<p>Have you ever thought that you needed to be a programmer to do stream processing and build streaming data pipelines? Think again!</p>
+<p>Apache Kafka is a distributed, scalable, and fault-tolerant streaming platform, providing low-latency pub-sub messaging coupled with native storage and stream processing capabilities. Integrating Kafka with RDBMS, NoSQL, and object stores is simple with Kafka Connect, which is part of Apache Kafka. ksqlDB is the source-available SQL streaming engine for Apache Kafka, and makes it possible to build stream processing applications at scale, written using a familiar SQL interface.</p>
+<p>In this talk, we’ll explain the architectural reasoning for Apache Kafka and the benefits of real-time integration, and we’ll build a streaming data pipeline using nothing but our bare hands, Kafka Connect, and ksqlDB.</p>
+<p>Gasp as we filter events in real-time! Be amazed at how we can enrich streams of data with data from RDBMS! Be astonished at the power of streaming aggregates for anomaly detection!</p>

@@ -1,0 +1,4 @@
+name = "Talks Archive"
+license = "MIT"
+licenselink = "https://github.com/rmoff/talks/blob/main/LICENSE"
+description = "A minimal theme for displaying talk archives"

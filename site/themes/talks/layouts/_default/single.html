@@ -1,0 +1,62 @@
+{{ define "main" }}
+<article class="talk-single">
+    <header class="talk-header">
+        <h1 class="talk-title">{{ .Title }}</h1>
+        <div class="talk-meta">
+            {{ with .Params.event }}<span class="talk-event">{{ . }}</span>{{ end }}
+            {{ with .Params.date }}<time class="talk-date">{{ dateFormat "2 January 2006" . }}</time>{{ end }}
+            {{ with .Params.location }}<span class="talk-location">{{ . }}</span>{{ end }}
+        </div>
+    </header>
+
+    {{ with .Params.pdf }}
+    <div class="pdf-viewer">
+        <iframe src="{{ . }}" width="100%" height="600px" style="border: none; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"></iframe>
+        <div class="pdf-download-link">
+            <a href="{{ . }}" download>Download PDF</a>
+        </div>
+    </div>
+    {{ else }}
+    {{ with $.Params.image }}
+    <div class="talk-hero-image">
+        <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+    </div>
+    {{ end }}
+    {{ end }}
+
+    <div class="talk-description">
+        {{ .Content }}
+    </div>
+
+    {{ with .Params.resources }}
+    <div class="talk-resources">
+        <h2>Resources</h2>
+        <ul>
+            {{ range . }}
+            <li>
+                <a href="{{ .url }}" target="_blank">{{ .title }}</a>
+                {{ with .description }}<p>{{ . | safeHTML }}</p>{{ end }}
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+    {{ end }}
+
+    {{ with .Params.embeds }}
+    <div class="talk-embeds">
+        <h2>Social Media</h2>
+        <div class="embeds-list">
+            {{ range . }}
+            <div class="embed-item" data-embed-type="{{ .type }}">
+                {{ .html | safeHTML }}
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+
+    <footer class="talk-footer">
+        <a href="{{ .Site.BaseURL }}">&larr; Back to all talks</a>
+    </footer>
+</article>
+{{ end }}

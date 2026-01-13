@@ -1,0 +1,22 @@
+baseURL = "https://talks.rmoff.net/"
+languageCode = "en-us"
+title = "Robin Moffatt's Talks Archive"
+theme = "talks"
+
+[params]
+  author = "Robin Moffatt"
+  description = "Archive of conference talks and presentations by Robin Moffatt"
+  twitter = "rmoff"
+  github = "rmoff"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[permalinks]
+  talks = "/:slug/"

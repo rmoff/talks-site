@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="talks-list">
+    <h2>All Presentations ({{ len .Site.RegularPages }})</h2>
+
+    {{ $talks := .Site.RegularPages.ByParam "date" }}
+    {{ range $talks.Reverse }}
+    <article class="talk-card">
+        <a href="{{ .RelPermalink }}" class="talk-link">
+            {{ with .Params.image }}
+            <img src="{{ . }}" alt="{{ $.Title }}" class="talk-thumbnail" loading="lazy">
+            {{ end }}
+            <div class="talk-info">
+                <h3 class="talk-title">{{ .Title }}</h3>
+                <p class="talk-meta">
+                    {{ with .Params.event }}<span class="talk-event">{{ . }}</span>{{ end }}
+                    {{ with .Params.date }}<time class="talk-date">{{ dateFormat "2 Jan 2006" . }}</time>{{ end }}
+                    {{ with .Params.location }}<span class="talk-location">{{ . }}</span>{{ end }}
+                </p>
+            </div>
+        </a>
+    </article>
+    {{ end }}
+</div>
+{{ end }}
