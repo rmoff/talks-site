@@ -1,5 +1,17 @@
+{{ define "head_extra" }}
+{{ with .Params.image }}
+{{ $basePath := replaceRE "\\.[^.]+$" "" . }}
+<link rel="preload" as="image" type="image/webp" href="{{ $basePath }}.webp">
+{{ end }}
+{{ end }}
+
 {{ define "main" }}
-<div class="talk-hero" {{ with .Params.image }}style="background-image: url('{{ . }}');"{{ end }}>
+{{/* Hero background uses WebP */}}
+{{ $heroWebP := "" }}
+{{ with .Params.image }}
+{{ $heroWebP = replaceRE "\\.[^.]+$" ".webp" . }}
+{{ end }}
+<div class="talk-hero" {{ with $heroWebP }}style="background-image: url('{{ . }}');"{{ end }}>
     <div class="talk-hero-overlay">
         <a href="{{ .Site.BaseURL }}" class="talk-hero-back">&larr; All Talks</a>
         <div class="talk-hero-content">
@@ -25,7 +37,7 @@
             <div class="pdf-viewer" data-pdf-src="{{ . }}">
                 <div class="pdf-placeholder">
                     {{ with $.Params.image }}
-                    <img src="{{ . }}" alt="{{ $.Title }}" class="pdf-placeholder-image">
+                    {{ partial "responsive-image.html" (dict "src" . "alt" $.Title "class" "pdf-placeholder-image" "loading" "eager") }}
                     {{ end }}
                     <div class="pdf-placeholder-overlay">
                         <div class="pdf-loading-spinner"></div>
@@ -40,7 +52,7 @@
             {{ else }}
             {{ with $.Params.image }}
             <div class="talk-hero-image">
-                <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+                {{ partial "responsive-image.html" (dict "src" . "alt" $.Title) }}
             </div>
             {{ end }}
             {{ end }}

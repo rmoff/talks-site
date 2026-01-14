@@ -71,7 +71,7 @@
                     <a href="{{ .RelPermalink }}" class="talk-link">
                         {{ with .Params.image }}
                         <div class="talk-thumbnail-wrapper">
-                            <img src="{{ . }}" alt="{{ $talk.Title }}" loading="lazy">
+                            {{ partial "responsive-image.html" (dict "src" . "alt" $talk.Title "sizes" "(max-width: 480px) 100vw, (max-width: 900px) 50vw, 400px") }}
                             {{ with $talk.Params.event }}
                             <div class="talk-meta-box">
                                 <div class="talk-event">{{ . }}</div>
