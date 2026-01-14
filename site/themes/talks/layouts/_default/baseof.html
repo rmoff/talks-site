@@ -6,21 +6,10 @@
     <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "index.xml" | absURL }}">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <h1 class="site-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
-            <p class="site-description">{{ .Site.Params.description }}</p>
-            <nav class="site-nav">
-                <a href="{{ .Site.BaseURL }}">All Talks</a>
-                {{ with .Site.Params.twitter }}<a href="https://twitter.com/{{ . }}" target="_blank">Twitter</a>{{ end }}
-                {{ with .Site.Params.github }}<a href="https://github.com/{{ . }}" target="_blank">GitHub</a>{{ end }}
-                <a href="https://rmoff.net" target="_blank">Blog</a>
-            </nav>
-        </div>
-    </header>
 
     <main class="site-main">
         <div class="container">

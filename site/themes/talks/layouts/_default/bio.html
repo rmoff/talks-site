@@ -1,0 +1,74 @@
+{{ define "main" }}
+<div class="bio-hero">
+    <div class="bio-hero-overlay">
+        <a href="{{ .Site.BaseURL }}" class="bio-hero-back">&larr; All Talks</a>
+        <div class="bio-hero-content">
+            <img src="https://on.notist.cloud/profile/pr-rmoff-large-0631f268c74370c9.jpg" alt="Robin Moffatt" class="bio-avatar">
+            <h1 class="bio-hero-title">Robin Moffatt</h1>
+            <p class="bio-hero-subtitle">Principal DevEx Engineer & Conference Speaker</p>
+        </div>
+    </div>
+</div>
+
+<article class="bio-single">
+    <div class="bio-content">
+        {{ .Content }}
+    </div>
+
+    <div class="bio-links">
+        <h2>Find Me Online</h2>
+        <div class="bio-links-grid">
+            <a href="https://rmoff.net" class="bio-link" target="_blank">
+                <i class="fas fa-blog bio-link-icon"></i>
+                <span class="bio-link-title">Blog</span>
+                <span class="bio-link-url">rmoff.net</span>
+            </a>
+            <a href="https://youtube.com/rmoff" class="bio-link" target="_blank">
+                <i class="fab fa-youtube bio-link-icon"></i>
+                <span class="bio-link-title">YouTube</span>
+                <span class="bio-link-url">youtube.com/rmoff</span>
+            </a>
+            {{ with .Site.Params.twitter }}
+            <a href="https://twitter.com/{{ . }}" class="bio-link" target="_blank">
+                <i class="fab fa-twitter bio-link-icon"></i>
+                <span class="bio-link-title">Twitter</span>
+                <span class="bio-link-url">@{{ . }}</span>
+            </a>
+            {{ end }}
+            <a href="https://bsky.app/profile/rmoff.net" class="bio-link" target="_blank">
+                <i class="fa-brands fa-bluesky bio-link-icon"></i>
+                <span class="bio-link-title">Bluesky</span>
+                <span class="bio-link-url">@rmoff.net</span>
+            </a>
+            <a href="https://www.linkedin.com/in/robinmoffatt" class="bio-link" target="_blank">
+                <i class="fab fa-linkedin bio-link-icon"></i>
+                <span class="bio-link-title">LinkedIn</span>
+                <span class="bio-link-url">robinmoffatt</span>
+            </a>
+            {{ with .Site.Params.github }}
+            <a href="https://github.com/{{ . }}" class="bio-link" target="_blank">
+                <i class="fab fa-github bio-link-icon"></i>
+                <span class="bio-link-title">GitHub</span>
+                <span class="bio-link-url">github.com/{{ . }}</span>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+
+    {{ $talks := where .Site.RegularPages ".Params.notist_id" "!=" nil }}
+    <div class="bio-stats">
+        <div class="bio-stat">
+            <span class="bio-stat-number">{{ len $talks }}</span>
+            <span class="bio-stat-label">Talks</span>
+        </div>
+        <div class="bio-stat">
+            <span class="bio-stat-number">15+</span>
+            <span class="bio-stat-label">Years Speaking</span>
+        </div>
+        <div class="bio-stat">
+            <span class="bio-stat-number">20+</span>
+            <span class="bio-stat-label">Conferences</span>
+        </div>
+    </div>
+</article>
+{{ end }}

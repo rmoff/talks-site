@@ -11,8 +11,23 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.6;
     color: #2c3e50;
-    background: #f8f9fa;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 50%, #f0f2f5 100%);
+    background-attachment: fixed;
     font-size: 16px;
+}
+
+/* Subtle dot pattern overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(102, 126, 234, 0.03) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+    z-index: -1;
 }
 
 a {
@@ -78,28 +93,191 @@ a:hover {
     min-height: calc(100vh - 300px);
 }
 
-/* Talks list */
-.talks-list h2 {
-    margin: 0 0 1.5rem;
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: -2rem -2rem 2rem -2rem;
+    border-radius: 0 0 16px 16px;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+        rgba(102, 126, 234, 0.92) 0%,
+        rgba(118, 75, 162, 0.88) 50%,
+        rgba(26, 26, 46, 0.85) 100%);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: #fff;
+    padding: 2rem;
+    max-width: 900px;
+}
+
+.hero-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-tagline {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    line-height: 1.1;
+}
+
+.hero-bio {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin: 0 0 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-nav a {
+    color: #fff;
+    opacity: 0.8;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-nav a:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* Year Navigation - Floating Sidebar */
+.year-nav {
+    position: fixed;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.year-nav-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    background: rgba(26, 26, 46, 0.9);
+    backdrop-filter: blur(8px);
+    padding: 0.75rem 0.5rem;
+    border-radius: 8px;
+}
+
+.year-nav-link {
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.35rem 0.5rem;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: all 0.2s;
+    border-radius: 4px;
+}
+
+.year-nav-link:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.15);
+    text-decoration: none;
+}
+
+.year-nav-link.active {
+    opacity: 1;
+    background: rgba(102, 126, 234, 0.9);
+    font-weight: 600;
+}
+
+/* Year-based Layout with Patterns */
+.talks-by-year {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.year-section {
+    margin-bottom: 4rem;
+}
+
+.year-title {
+    font-size: 2.5rem;
+    font-weight: 700;
     color: #1a1a2e;
+    margin: 0 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #667eea;
+}
+
+.year-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    grid-auto-flow: dense;
 }
 
 .talk-card {
     background: #fff;
-    border-radius: 8px;
+    border-radius: 0;
     overflow: hidden;
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.talk-card.primary {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.talk-card.secondary {
+    grid-column: span 1;
+    grid-row: span 1;
 }
 
 .talk-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
 .talk-link {
-    display: flex;
+    display: block;
     color: inherit;
     text-decoration: none;
 }
@@ -108,34 +286,128 @@ a:hover {
     text-decoration: none;
 }
 
-.talk-thumbnail {
-    width: 200px;
-    height: 112px;
-    object-fit: cover;
-    flex-shrink: 0;
+.talk-thumbnail-wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #f5f5f5;
 }
 
-.talk-info {
-    padding: 1rem;
-    flex: 1;
+.talk-thumbnail-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-.talk-title {
-    margin: 0 0 0.5rem;
-    font-size: 1.1rem;
-    color: #1a1a2e;
+.talk-card:hover .talk-thumbnail-wrapper img {
+    transform: scale(1.05);
 }
 
-.talk-meta {
-    font-size: 0.875rem;
-    color: #666;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem 1rem;
+.talk-meta-box {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    background: rgba(26, 26, 46, 0.85);
+    backdrop-filter: blur(4px);
+    border-radius: 6px;
+    max-width: calc(100% - 1.5rem);
 }
 
 .talk-event {
-    font-weight: 500;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.talk-info {
+    padding: 0.75rem;
+    background: #000;
+}
+
+.talk-title {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Single Talk Hero */
+.talk-hero {
+    position: relative;
+    height: 220px;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    margin: -2rem -2rem 2rem -2rem;
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+}
+
+.talk-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+        rgba(26, 26, 46, 0.88) 0%,
+        rgba(102, 126, 234, 0.75) 50%,
+        rgba(118, 75, 162, 0.8) 100%);
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.talk-hero-back {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    color: #fff;
+    font-size: 0.85rem;
+    opacity: 0.8;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.talk-hero-back:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.talk-hero-content {
+    max-width: 900px;
+}
+
+.talk-hero-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.75rem;
+    line-height: 1.2;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.talk-hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.talk-hero-event {
+    font-weight: 600;
+}
+
+.talk-hero-date::before,
+.talk-hero-location::before {
+    content: "·";
+    margin-right: 0.5rem;
+    opacity: 0.6;
 }
 
 /* Single talk page */
@@ -146,10 +418,15 @@ a:hover {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.talk-header {
+.talk-main-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
     margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #eee;
+}
+
+.talk-slides-section {
+    min-width: 0;
 }
 
 .talk-hero-image {
@@ -199,8 +476,8 @@ a:hover {
 .talk-description {
     margin-bottom: 2.5rem;
     font-family: 'Merriweather', Georgia, serif;
-    font-size: 1.125rem;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    line-height: 1.7;
     font-style: italic;
     color: #34495e;
 }
@@ -327,6 +604,186 @@ a:hover {
     color: #666;
 }
 
+/* Bio Page */
+.bio-hero {
+    position: relative;
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: -2rem -2rem 2rem -2rem;
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+}
+
+.bio-hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.bio-hero-back {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    color: #fff;
+    font-size: 0.85rem;
+    opacity: 0.8;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.bio-hero-back:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.bio-hero-content {
+    text-align: center;
+}
+
+.bio-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+}
+
+.bio-hero-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.5rem;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.bio-hero-subtitle {
+    font-size: 1.1rem;
+    color: #fff;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.bio-single {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.bio-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #34495e;
+    margin-bottom: 2.5rem;
+}
+
+.bio-content h2 {
+    font-size: 1.5rem;
+    color: #1a1a2e;
+    margin: 2rem 0 1rem;
+}
+
+.bio-content a {
+    color: #667eea;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+.bio-content a:hover {
+    border-bottom-color: #667eea;
+}
+
+.bio-links {
+    margin-bottom: 2.5rem;
+}
+
+.bio-links h2 {
+    font-size: 1.25rem;
+    color: #1a1a2e;
+    margin: 0 0 1rem;
+}
+
+.bio-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.bio-link {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.25rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+    border-radius: 8px;
+    border-left: 3px solid #667eea;
+    text-decoration: none;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.bio-link:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-decoration: none;
+}
+
+.bio-link-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.25rem;
+    color: #667eea;
+    opacity: 0.4;
+}
+
+.bio-link:hover .bio-link-icon {
+    opacity: 0.7;
+}
+
+.bio-link-title {
+    font-weight: 600;
+    color: #1a1a2e;
+    font-size: 1rem;
+}
+
+.bio-link-url {
+    font-size: 0.85rem;
+    color: #667eea;
+    margin-top: 0.25rem;
+}
+
+.bio-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem 0;
+    border-top: 1px solid #eee;
+}
+
+.bio-stat {
+    text-align: center;
+}
+
+.bio-stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #667eea;
+    line-height: 1;
+}
+
+.bio-stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
 /* Footer */
 .talk-footer {
     margin-top: 2rem;
@@ -351,18 +808,92 @@ a:hover {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
-    .talk-link {
+@media (max-width: 1024px) {
+    .year-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .year-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .talk-main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .talk-description {
+        order: 1;
+    }
+
+    .talk-slides-section {
+        order: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+        min-height: 200px;
+        margin: -1.5rem -1.5rem 2rem -1.5rem;
+    }
+
+    .hero-content {
         flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.5rem;
     }
 
-    .talk-thumbnail {
-        width: 100%;
-        height: 180px;
+    .hero-avatar {
+        width: 80px;
+        height: 80px;
     }
 
-    .talk-header .talk-title {
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-tagline {
         font-size: 1.5rem;
+    }
+
+    .hero-bio {
+        font-size: 0.85rem;
+    }
+
+    .hero-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .hero-nav a {
+        width: 32px;
+        height: 32px;
+        font-size: 1.1rem;
+    }
+
+    .year-title {
+        font-size: 2rem;
+    }
+
+    .year-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .talk-hero {
+        height: 180px;
+        margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+    }
+
+    .talk-hero-title {
+        font-size: 1.35rem;
+    }
+
+    .talk-hero-meta {
+        font-size: 0.8rem;
     }
 
     .slides-grid {
@@ -371,5 +902,78 @@ a:hover {
 
     .embeds-list {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        margin: -1rem -1rem 1.5rem -1rem;
+    }
+
+    .hero-content {
+        padding: 1rem;
+    }
+
+    .hero-avatar {
+        width: 70px;
+        height: 70px;
+    }
+
+    .hero-tagline {
+        font-size: 1.25rem;
+    }
+
+    .hero-bio {
+        font-size: 0.8rem;
+    }
+
+    .hero-nav {
+        gap: 0.5rem;
+    }
+
+    .hero-nav a {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .bio-stats {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .bio-stat-number {
+        font-size: 2rem;
+    }
+
+    .year-title {
+        font-size: 1.75rem;
+    }
+
+    .year-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .talk-card.primary {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .talk-hero {
+        height: 160px;
+        margin: -1rem -1rem 1rem -1rem;
+    }
+
+    .talk-hero-overlay {
+        padding: 1rem;
+    }
+
+    .talk-hero-title {
+        font-size: 1.1rem;
+    }
+
+    .talk-hero-meta {
+        font-size: 0.75rem;
+        gap: 0.5rem;
     }
 }

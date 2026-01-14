@@ -1,31 +1,41 @@
 {{ define "main" }}
+<div class="talk-hero" {{ with .Params.image }}style="background-image: url('{{ . }}');"{{ end }}>
+    <div class="talk-hero-overlay">
+        <a href="{{ .Site.BaseURL }}" class="talk-hero-back">&larr; All Talks</a>
+        <div class="talk-hero-content">
+            <h1 class="talk-hero-title">{{ .Title }}</h1>
+            <div class="talk-hero-meta">
+                {{ with .Params.event }}<span class="talk-hero-event">{{ . }}</span>{{ end }}
+                {{ with .Params.date }}<time class="talk-hero-date">{{ dateFormat "2 January 2006" . }}</time>{{ end }}
+                {{ with .Params.location }}<span class="talk-hero-location">{{ . }}</span>{{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+
 <article class="talk-single">
-    <header class="talk-header">
-        <h1 class="talk-title">{{ .Title }}</h1>
-        <div class="talk-meta">
-            {{ with .Params.event }}<span class="talk-event">{{ . }}</span>{{ end }}
-            {{ with .Params.date }}<time class="talk-date">{{ dateFormat "2 January 2006" . }}</time>{{ end }}
-            {{ with .Params.location }}<span class="talk-location">{{ . }}</span>{{ end }}
-        </div>
-    </header>
 
-    {{ with .Params.pdf }}
-    <div class="pdf-viewer">
-        <iframe src="{{ . }}" width="100%" height="600px" style="border: none; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"></iframe>
-        <div class="pdf-download-link">
-            <a href="{{ . }}" download>Download PDF</a>
+    <div class="talk-main-content">
+        <div class="talk-description">
+            {{ .Content }}
         </div>
-    </div>
-    {{ else }}
-    {{ with $.Params.image }}
-    <div class="talk-hero-image">
-        <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
-    </div>
-    {{ end }}
-    {{ end }}
 
-    <div class="talk-description">
-        {{ .Content }}
+        <div class="talk-slides-section">
+            {{ with .Params.pdf }}
+            <div class="pdf-viewer">
+                <iframe src="{{ . }}" width="100%" height="500px" style="border: none; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"></iframe>
+                <div class="pdf-download-link">
+                    <a href="{{ . }}" download>Download PDF</a>
+                </div>
+            </div>
+            {{ else }}
+            {{ with $.Params.image }}
+            <div class="talk-hero-image">
+                <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+            </div>
+            {{ end }}
+            {{ end }}
+        </div>
     </div>
 
     {{ with .Params.resources }}
@@ -55,8 +65,5 @@
     </div>
     {{ end }}
 
-    <footer class="talk-footer">
-        <a href="{{ .Site.BaseURL }}">&larr; Back to all talks</a>
-    </footer>
 </article>
 {{ end }}
