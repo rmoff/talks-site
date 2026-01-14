@@ -55,7 +55,9 @@
         </div>
     </div>
 
-    {{ $talks := where .Site.RegularPages ".Params.notist_id" "!=" nil }}
+    {{ $notistTalks := where .Site.RegularPages ".Params.notist_id" "!=" nil }}
+    {{ $speakerdeckTalks := where .Site.RegularPages ".Params.speakerdeck_slug" "!=" nil }}
+    {{ $talks := $notistTalks | append $speakerdeckTalks }}
     <div class="bio-stats">
         <div class="bio-stat">
             <span class="bio-stat-number">{{ len $talks }}</span>

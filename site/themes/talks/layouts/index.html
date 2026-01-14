@@ -1,5 +1,7 @@
 {{ define "main" }}
-{{ $allTalks := where .Site.RegularPages ".Params.notist_id" "!=" nil }}
+{{ $notistTalks := where .Site.RegularPages ".Params.notist_id" "!=" nil }}
+{{ $speakerdeckTalks := where .Site.RegularPages ".Params.speakerdeck_slug" "!=" nil }}
+{{ $allTalks := $notistTalks | append $speakerdeckTalks }}
 {{ $talks := $allTalks.ByParam "date" }}
 {{ $recentTalk := index ($talks.Reverse) 0 }}
 
