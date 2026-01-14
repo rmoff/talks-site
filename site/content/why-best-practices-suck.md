@@ -1,7 +1,7 @@
 ---
 title: "Why Best Practices Suck"
 slug: "why-best-practices-suck-sd"
-date: "2015-01-01T08:00:00"
+date: "2014-10-24T08:00:00"
 event: ""
 location: ""
 image: "/images/why-best-practices-suck/slide_000.jpg"

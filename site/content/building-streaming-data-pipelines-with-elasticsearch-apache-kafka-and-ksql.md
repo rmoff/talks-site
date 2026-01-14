@@ -1,7 +1,7 @@
 ---
 title: "Building Streaming Data Pipelines with Elasticsearch, Apache Kafka, and KSQL"
 slug: "building-streaming-data-pipelines-with-elasticsearch-apache-kafka-and-ksql-sd"
-date: "2015-01-01T08:00:00"
+date: "2018-01-31T08:00:00"
 event: ""
 location: ""
 image: "/images/building-streaming-data-pipelines-with-elasticsearch-apache-kafka-and-ksql/slide_000.jpg"
@@ -10,4 +10,6 @@ source: "speakerdeck"
 speakerdeck_slug: "building-streaming-data-pipelines-with-elasticsearch-apache-kafka-and-ksql"
 ---
 
-Companies new and old are all recognising the importance of a low-latency, scalable, fault-tolerant data backbone, in the form of the Apache Kafka str&amp;hellip;
+Companies are recognizing the importance of a low-latency, scalable, fault-tolerant data backbone using Apache Kafka. With Kafka, developers can integrate multiple sources and systems, enabling low-latency analytics, event-driven architectures, and population of multiple downstream systems through configuration alone.
+
+The presentation demonstrates streaming data from databases into Kafka using the Kafka Connect API, transforming it with KSQL through filtering, aggregating, and joining operations, then streaming results to Elasticsearch with time-based indices—all without writing code.

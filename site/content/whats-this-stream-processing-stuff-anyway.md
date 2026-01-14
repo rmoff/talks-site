@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s this Stream Processing stuff anyway?"
 slug: "what39s-this-stream-processing-stuff-anyway-sd"
-date: "2015-01-01T08:00:00"
+date: "2017-10-03T08:00:00"
 event: ""
 location: ""
 image: "/images/whats-this-stream-processing-stuff-anyway/slide_000.jpg"
