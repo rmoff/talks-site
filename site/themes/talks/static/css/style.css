@@ -459,17 +459,34 @@ a:hover {
     margin-bottom: 2rem;
 }
 
+.pdf-iframe-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 1px solid var(--border);
+    background: #000;
+}
+
+.pdf-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 .pdf-download-link {
     text-align: center;
     margin-top: 1rem;
 }
 
 .pdf-download-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--accent);
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     border: 1px solid var(--accent);
     border-radius: 4px;
     transition: all 0.2s;
@@ -478,62 +495,6 @@ a:hover {
 .pdf-download-link a:hover {
     background: var(--accent);
     color: var(--bg-primary);
-    text-decoration: none;
-}
-
-/* PDF Placeholder */
-.pdf-placeholder {
-    position: relative;
-    border: 1px solid var(--border);
-    overflow: hidden;
-    aspect-ratio: 16 / 9;
-    background: var(--bg-primary);
-}
-
-.pdf-placeholder-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    opacity: 0.6;
-}
-
-.pdf-placeholder-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(13, 17, 23, 0.6);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.pdf-placeholder-text {
-    color: var(--text-secondary);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85rem;
-}
-
-.pdf-loading-spinner {
-    width: 32px;
-    height: 32px;
-    border: 2px solid var(--border);
-    border-top-color: var(--accent);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-.pdf-iframe {
-    width: 100%;
-    border: 1px solid var(--border);
 }
 
 .talk-description {

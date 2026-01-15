@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?v=8">
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?v=10">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "index.xml" | absURL }}">
     {{ block "head_extra" . }}{{ end }}
@@ -27,44 +27,5 @@
     <!-- Twitter widgets script to render embedded tweets -->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-    <!-- PDF background loading - swap when ready -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const TOOLBAR_HEIGHT = 40;
-
-        document.querySelectorAll('.pdf-viewer').forEach(function(viewer) {
-            const placeholder = viewer.querySelector('.pdf-placeholder');
-            const iframe = viewer.querySelector('.pdf-iframe');
-            let swapped = false;
-
-            if (iframe && placeholder) {
-                function setIframeHeight() {
-                    const width = iframe.offsetWidth;
-                    const contentHeight = width * 9 / 16;
-                    iframe.style.height = (contentHeight + TOOLBAR_HEIGHT) + 'px';
-                }
-
-                function showPDF() {
-                    if (swapped) return;
-                    swapped = true;
-                    placeholder.style.display = 'none';
-                    iframe.style.display = 'block';
-                    setIframeHeight();
-                }
-
-                // Try onload event
-                iframe.onload = showPDF;
-
-                // Fallback: swap after 2 seconds regardless
-                setTimeout(showPDF, 2000);
-
-                // Recalculate on resize
-                window.addEventListener('resize', function() {
-                    if (swapped) setIframeHeight();
-                });
-            }
-        });
-    });
-    </script>
 </body>
 </html>
