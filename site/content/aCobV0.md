@@ -1,6 +1,7 @@
 ---
 title: "The Changing Face of ETL: Event-Driven Architectures for Data Engineers"
 slug: "the-changing-face-of-etl-event-driven-architectures-for-data-engineers-aCobV0"
+aliases: ["/aCobV0/the-changing-face-of-etl-event-driven-architectures-for-data-engineers"]
 date: 2019-11-05T08:00:00
 event: "Øredev 2019"
 location: "Malmö, Sweden"

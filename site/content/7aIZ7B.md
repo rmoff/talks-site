@@ -1,6 +1,7 @@
 ---
 title: "Apache Kafka and KSQL in Action : Let’s Build a Streaming Data Pipeline!"
 slug: "apache-kafka-and-ksql-in-action-lets-build-a-streaming-data-pipeline-7aIZ7B"
+aliases: ["/7aIZ7B/apache-kafka-and-ksql-in-action-lets-build-a-streaming-data-pipeline"]
 date: 2019-06-25T08:00:00
 event: "Seattle Event Driven Meetup"
 location: "Seattle, WA, USA"

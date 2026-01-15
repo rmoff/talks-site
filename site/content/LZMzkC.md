@@ -1,6 +1,7 @@
 ---
 title: "🚂 On Track with Apache Kafka: Building a Streaming ETL solution with Rail Data"
 slug: "on-track-with-apache-kafka-building-a-streaming-etl-solution-with-rail-data-LZMzkC"
+aliases: ["/LZMzkC/on-track-with-apache-kafka-building-a-streaming-etl-solution-with-rail-data"]
 date: 2019-11-05T08:00:00
 event: "Øredev 2019"
 location: "Malmö, Sweden"

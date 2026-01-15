@@ -1,6 +1,7 @@
 ---
 title: "🤖Building a Telegram bot with Apache Kafka and ksqlDB"
 slug: "building-a-telegram-bot-with-apache-kafka-and-ksqldb-Dyohiq"
+aliases: ["/Dyohiq/building-a-telegram-bot-with-apache-kafka-and-ksqldb"]
 date: 2020-10-12T08:00:00
 event: "NDC Sydney"
 location: "Virtual"

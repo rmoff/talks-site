@@ -1,6 +1,7 @@
 ---
 title: "Introduction to ksqlDB"
 slug: "introduction-to-ksqldb-LjZAS7"
+aliases: ["/LjZAS7/introduction-to-ksqldb"]
 date: 2020-02-24T08:00:00
 event: "Software Circus / Amsterdam Kafka Meetup"
 location: "Amsterdam, Netherlands"

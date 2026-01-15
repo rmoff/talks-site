@@ -1,6 +1,7 @@
 ---
 title: "The Changing Face of ETL: Event-Driven Architectures for Data Engineers"
 slug: "the-changing-face-of-etl-event-driven-architectures-for-data-engineers-GGzp87"
+aliases: ["/GGzp87/the-changing-face-of-etl-event-driven-architectures-for-data-engineers"]
 date: 2019-02-27T08:00:00
 event: "Big Data Tech Warsaw"
 location: "Warsaw, Poland"

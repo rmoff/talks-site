@@ -1,6 +1,7 @@
 ---
 title: "From Zero to Hero with Kafka Connect"
 slug: "from-zero-to-hero-with-kafka-connect-DQkDj3"
+aliases: ["/DQkDj3/from-zero-to-hero-with-kafka-connect"]
 date: 2020-05-06T08:00:00
 event: "LJC Virtual Meetup"
 location: "London, UK"

@@ -1,6 +1,7 @@
 ---
 title: "Apache Kafka and ksqlDB in Action: Let’s Build a Streaming Data Pipeline!"
 slug: "apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline-8m4zch"
+aliases: ["/8m4zch/apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline"]
 date: 2020-06-23T08:00:00
 event: "DataXDays"
 location: "Virtual"

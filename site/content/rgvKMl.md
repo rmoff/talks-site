@@ -1,6 +1,7 @@
 ---
 title: "I’m not a YouTuber; come and learn how you can not be one too"
 slug: "im-not-a-youtuber-come-and-learn-how-you-can-not-be-one-too-rgvKMl"
+aliases: ["/rgvKMl/im-not-a-youtuber-come-and-learn-how-you-can-not-be-one-too"]
 date: 2020-05-27T08:00:00
 event: "DevRel Meetup"
 location: "Virtual"

@@ -1,6 +1,7 @@
 ---
 title: "Kafka as a Platform: the Ecosystem from the Ground Up"
 slug: "kafka-as-a-platform-the-ecosystem-from-the-ground-up-MaxFXn"
+aliases: ["/MaxFXn/kafka-as-a-platform-the-ecosystem-from-the-ground-up"]
 date: 2020-06-08T08:00:00
 event: "NDC Oslo"
 location: "Virtual"

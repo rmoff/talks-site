@@ -1,6 +1,7 @@
 ---
 title: "🤖 Building a Telegram bot with Apache Kafka, Go, and ksqlDB"
 slug: "building-a-telegram-bot-with-apache-kafka-go-and-ksqldb-UbXLUv"
+aliases: ["/UbXLUv/building-a-telegram-bot-with-apache-kafka-go-and-ksqldb"]
 date: 2021-01-25T08:00:00
 event: "NDC London 2021"
 location: "Virtual"

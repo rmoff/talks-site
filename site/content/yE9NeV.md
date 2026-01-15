@@ -1,6 +1,7 @@
 ---
 title: "From Zero to Hero with Kafka Connect"
 slug: "from-zero-to-hero-with-kafka-connect-yE9NeV"
+aliases: ["/yE9NeV/from-zero-to-hero-with-kafka-connect"]
 date: 2019-06-17T08:00:00
 event: "Berlin Buzzwords 2019"
 location: "Berlin, Germany"

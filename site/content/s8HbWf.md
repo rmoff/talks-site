@@ -1,6 +1,7 @@
 ---
 title: "The Changing Face of ETL: Event-Driven Architectures for Data Engineers"
 slug: "the-changing-face-of-etl-event-driven-architectures-for-data-engineers-s8HbWf"
+aliases: ["/s8HbWf/the-changing-face-of-etl-event-driven-architectures-for-data-engineers"]
 date: 2019-06-24T08:00:00
 event: "KScope 19"
 location: "Seattle, WA, USA"

@@ -1,6 +1,7 @@
 ---
 title: "Kafka as a Platform: the Ecosystem from the Ground Up"
 slug: "kafka-as-a-platform-the-ecosystem-from-the-ground-up-AOYSg3"
+aliases: ["/AOYSg3/kafka-as-a-platform-the-ecosystem-from-the-ground-up"]
 date: 2021-10-05T08:00:00
 event: "JCON 2021"
 location: "Virtual"

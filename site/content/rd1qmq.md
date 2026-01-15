@@ -1,6 +1,7 @@
 ---
 title: "From Zero to Hero with Kafka Connect"
 slug: "from-zero-to-hero-with-kafka-connect-rd1qmq"
+aliases: ["/rd1qmq/from-zero-to-hero-with-kafka-connect"]
 date: 2019-07-03T08:00:00
 event: "Munich Kafka Meetup"
 location: "Munich, Germany"

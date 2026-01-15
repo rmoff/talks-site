@@ -1,6 +1,7 @@
 ---
 title: "Apache Kafka and KSQL in Action : Let’s Build a Streaming Data Pipeline!"
 slug: "apache-kafka-and-ksql-in-action-lets-build-a-streaming-data-pipeline-5dqGLs"
+aliases: ["/5dqGLs/apache-kafka-and-ksql-in-action-lets-build-a-streaming-data-pipeline"]
 date: 2018-10-29T08:00:00
 event: "LISA 18"
 location: "Nashville, TN, USA"

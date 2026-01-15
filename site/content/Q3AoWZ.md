@@ -1,6 +1,7 @@
 ---
 title: "Kafka as a Platform: the Ecosystem from the Ground Up"
 slug: "kafka-as-a-platform-the-ecosystem-from-the-ground-up-Q3AoWZ"
+aliases: ["/Q3AoWZ/kafka-as-a-platform-the-ecosystem-from-the-ground-up"]
 date: 2020-06-09T08:00:00
 event: "Confluent VUG"
 location: "Virtual"

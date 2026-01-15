@@ -1,6 +1,7 @@
 ---
 title: "Real-time SQL stream processing at scale with Apache Kafka and KSQL"
 slug: "real-time-sql-stream-processing-at-scale-with-apache-kafka-and-ksql-3tK7EV"
+aliases: ["/3tK7EV/real-time-sql-stream-processing-at-scale-with-apache-kafka-and-ksql"]
 date: 2019-04-30T08:00:00
 event: "Strata Data Conference, London"
 location: "London, UK"

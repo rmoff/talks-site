@@ -1,6 +1,7 @@
 ---
 title: "ATM Fraud detection with Kafka and KSQL"
 slug: "atm-fraud-detection-with-kafka-and-ksql-ZznhX7"
+aliases: ["/ZznhX7/atm-fraud-detection-with-kafka-and-ksql"]
 date: 2018-12-10T08:00:00
 event: "IT Tage"
 location: "Frankfurt, Germany"

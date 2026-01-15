@@ -1,6 +1,7 @@
 ---
 title: "From Zero to Hero with Kafka Connect"
 slug: "from-zero-to-hero-with-kafka-connect-VgbZAY"
+aliases: ["/VgbZAY/from-zero-to-hero-with-kafka-connect"]
 date: 2020-11-17T08:00:00
 event: "Data + AI Summit Europe"
 location: "Virtual"

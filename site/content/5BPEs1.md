@@ -1,6 +1,7 @@
 ---
 title: "Building stream processing applications for Apache Kafka using KSQL"
 slug: "building-stream-processing-applications-for-apache-kafka-using-ksql-5BPEs1"
+aliases: ["/5BPEs1/building-stream-processing-applications-for-apache-kafka-using-ksql"]
 date: 2019-09-30T08:00:00
 event: "Kafka Summit San Francisco 2019"
 location: "San Francisco, CA, USA"

@@ -1,6 +1,7 @@
 ---
 title: "From Zero to Hero with Kafka Connect"
 slug: "from-zero-to-hero-with-kafka-connect-TdR3ZM"
+aliases: ["/TdR3ZM/from-zero-to-hero-with-kafka-connect"]
 date: 2019-06-18T08:00:00
 event: "Oslo Apache Kafka Meetup"
 location: "Oslo, Norway"

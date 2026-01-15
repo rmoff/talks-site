@@ -1,6 +1,7 @@
 ---
 title: "From Zero to Hero with Kafka Connect"
 slug: "from-zero-to-hero-with-kafka-connect-QZ5nsS"
+aliases: ["/QZ5nsS/from-zero-to-hero-with-kafka-connect"]
 date: 2019-05-13T08:00:00
 event: "Kafka Summit London 2019"
 location: "London, UK"

@@ -1,6 +1,7 @@
 ---
 title: "The Joy of JARs (and Other Flink SQL Troubleshooting Tales)"
 slug: "the-joy-of-jars-and-other-flink-sql-troubleshooting-tales-9GpIYA"
+aliases: ["/9GpIYA/the-joy-of-jars-and-other-flink-sql-troubleshooting-tales"]
 date: 2024-09-17T08:00:00
 event: "Current"
 location: "Austin, TX, USA"

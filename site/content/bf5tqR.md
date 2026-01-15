@@ -1,6 +1,7 @@
 ---
 title: "No More Silos: Integrating Databases and Apache Kafka"
 slug: "no-more-silos-integrating-databases-and-apache-kafka-bf5tqR"
+aliases: ["/bf5tqR/no-more-silos-integrating-databases-and-apache-kafka"]
 date: 2020-09-29T08:00:00
 event: "ApacheCon"
 location: "Virtual"

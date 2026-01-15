@@ -1,6 +1,7 @@
 ---
 title: "No More Silos: Integrating Databases and Apache Kafka"
 slug: "no-more-silos-integrating-databases-and-apache-kafka-a2cQn5"
+aliases: ["/a2cQn5/no-more-silos-integrating-databases-and-apache-kafka"]
 date: 2019-06-24T08:00:00
 event: "KScope 19"
 location: "Seattle, WA, USA"

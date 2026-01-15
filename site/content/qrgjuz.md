@@ -1,6 +1,7 @@
 ---
 title: "🚢 All at Sea with Streams - Using Kafka to Detect Patterns  in the Behaviour of Ships"
 slug: "all-at-sea-with-streams-using-kafka-to-detect-patterns-in-the-behaviour-of-ships-qrgjuz"
+aliases: ["/qrgjuz/all-at-sea-with-streams-using-kafka-to-detect-patterns-in-the-behaviour-of-ships"]
 date: 2021-09-14T08:00:00
 event: "Kafka Summit Americas"
 location: "Virtual"

@@ -1,6 +1,7 @@
 ---
 title: "Introduction to ksqlDB"
 slug: "introduction-to-ksqldb-NrxcrM"
+aliases: ["/NrxcrM/introduction-to-ksqldb"]
 date: 2020-02-26T08:00:00
 event: "Krakòw Apache Kafka meetup"
 location: "Kraków, Poland"

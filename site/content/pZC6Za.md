@@ -1,6 +1,7 @@
 ---
 title: "Apache Kafka and KSQL in Action : Let’s Build a Streaming Data Pipeline!"
 slug: "apache-kafka-and-ksql-in-action-lets-build-a-streaming-data-pipeline-pZC6Za"
+aliases: ["/pZC6Za/apache-kafka-and-ksql-in-action-lets-build-a-streaming-data-pipeline"]
 date: 2019-05-08T08:00:00
 event: "Devoxx UK"
 location: "London, UK"

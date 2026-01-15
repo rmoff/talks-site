@@ -1,6 +1,7 @@
 ---
 title: "Apache Kafka and ksqlDB in Action: Let’s Build a Streaming Data Pipeline!"
 slug: "apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline-ZXmBl9"
+aliases: ["/ZXmBl9/apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline"]
 date: 2021-05-11T08:00:00
 event: "DevOps Pro Europe"
 location: "Virtual"

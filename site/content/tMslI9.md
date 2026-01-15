@@ -1,6 +1,7 @@
 ---
 title: "🤖Building a Telegram bot with Apache Kafka, Go, and ksqlDB"
 slug: "building-a-telegram-bot-with-apache-kafka-go-and-ksqldb-tMslI9"
+aliases: ["/tMslI9/building-a-telegram-bot-with-apache-kafka-go-and-ksqldb"]
 date: 2020-11-06T08:00:00
 event: "Devoxx Ukraine"
 location: "Virtual"

@@ -1,6 +1,7 @@
 ---
 title: "No More Silos: Integrating Databases and Apache Kafka"
 slug: "no-more-silos-integrating-databases-and-apache-kafka-JOZJms"
+aliases: ["/JOZJms/no-more-silos-integrating-databases-and-apache-kafka"]
 date: 2021-06-14T08:00:00
 event: "Berlin Buzzwords"
 location: "Virtual"

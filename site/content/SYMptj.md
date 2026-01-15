@@ -1,6 +1,7 @@
 ---
 title: "🚂 On Track with Apache Kafka: Building a Streaming ETL solution with Rail Data"
 slug: "on-track-with-apache-kafka-building-a-streaming-etl-solution-with-rail-data-SYMptj"
+aliases: ["/SYMptj/on-track-with-apache-kafka-building-a-streaming-etl-solution-with-rail-data"]
 date: 2019-09-18T08:00:00
 event: "Frankfurt Kafka Meetup"
 location: "Frankfurt, Germany"

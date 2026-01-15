@@ -1,6 +1,7 @@
 ---
 title: "Kafka as a Platform: the Ecosystem from the Ground Up"
 slug: "kafka-as-a-platform-the-ecosystem-from-the-ground-up-8OCgKp"
+aliases: ["/8OCgKp/kafka-as-a-platform-the-ecosystem-from-the-ground-up"]
 date: 2020-09-15T08:00:00
 event: "GOTOpia"
 location: "Virtual"

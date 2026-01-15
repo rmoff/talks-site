@@ -1,6 +1,7 @@
 ---
 title: "ETL 2.0: It’s not just for data engineers anymore"
 slug: "etl-2-0-its-not-just-for-data-engineers-anymore-cLD3uF"
+aliases: ["/cLD3uF/etl-2-0-its-not-just-for-data-engineers-anymore"]
 date: 2019-11-04T08:00:00
 event: "O’Reilly Software Architecture Conference"
 location: "Berlin, Germany"

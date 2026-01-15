@@ -1,6 +1,7 @@
 ---
 title: "🚂 On Track with Apache Kafka: Building a Streaming ETL solution with Rail Data"
 slug: "on-track-with-apache-kafka-building-a-streaming-etl-solution-with-rail-data-8Oruwt"
+aliases: ["/8Oruwt/on-track-with-apache-kafka-building-a-streaming-etl-solution-with-rail-data"]
 date: 2019-07-10T08:00:00
 event: "Stuttgart Data Engineers Meetup"
 location: "Stuttgart, Germany"

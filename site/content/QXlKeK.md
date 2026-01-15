@@ -1,6 +1,7 @@
 ---
 title: "Kafka as a Platform: the Ecosystem from the Ground Up"
 slug: "kafka-as-a-platform-the-ecosystem-from-the-ground-up-QXlKeK"
+aliases: ["/QXlKeK/kafka-as-a-platform-the-ecosystem-from-the-ground-up"]
 date: 2021-09-21T00:00:00
 event: "ApacheCon"
 location: "Virtual"

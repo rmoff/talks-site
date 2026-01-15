@@ -1,6 +1,7 @@
 ---
 title: "Introduction to ksqlDB"
 slug: "introduction-to-ksqldb-WKykIL"
+aliases: ["/WKykIL/introduction-to-ksqldb"]
 date: 2020-05-13T08:00:00
 event: "LJC Virtual Meetup"
 location: "Virtual"

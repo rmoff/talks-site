@@ -1,6 +1,7 @@
 ---
 title: "Integrating Oracle and Kafka"
 slug: "integrating-oracle-and-kafka-ixPL5r"
+aliases: ["/ixPL5r/integrating-oracle-and-kafka"]
 date: 2020-06-15T08:00:00
 event: "ACEs @ Home"
 location: "Virtual"

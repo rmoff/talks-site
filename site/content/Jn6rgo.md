@@ -1,6 +1,7 @@
 ---
 title: "The Changing Face of ETL: Event-Driven Architectures for Data Engineers"
 slug: "the-changing-face-of-etl-event-driven-architectures-for-data-engineers-Jn6rgo"
+aliases: ["/Jn6rgo/the-changing-face-of-etl-event-driven-architectures-for-data-engineers"]
 date: 2020-02-03T08:00:00
 event: "OOP"
 location: "Munich, Germany"

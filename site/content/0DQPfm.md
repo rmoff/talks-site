@@ -1,6 +1,7 @@
 ---
 title: "From Zero to Hero with Kafka Connect"
 slug: "from-zero-to-hero-with-kafka-connect-0DQPfm"
+aliases: ["/0DQPfm/from-zero-to-hero-with-kafka-connect"]
 date: 2019-10-21T08:00:00
 event: "Voxxed Microservices"
 location: "Paris, France"

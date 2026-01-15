@@ -1,6 +1,7 @@
 ---
 title: "ATM Fraud Detection with Apache Kafka and KSQL"
 slug: "atm-fraud-detection-with-apache-kafka-and-ksql-Cw9hbI"
+aliases: ["/Cw9hbI/atm-fraud-detection-with-apache-kafka-and-ksql"]
 date: 2019-04-29T08:00:00
 event: "London Kafka Meetup"
 location: "London, UK"

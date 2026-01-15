@@ -1,6 +1,7 @@
 ---
 title: "Embrace the Anarchy : Apache Kafka's Role in Modern Data Architectures"
 slug: "embrace-the-anarchy-apache-kafka-s-role-in-modern-data-architectures-LSemuJ"
+aliases: ["/LSemuJ/embrace-the-anarchy-apache-kafka-s-role-in-modern-data-architectures"]
 date: 2018-08-01T08:00:00
 event: "Munich Microservices Meetup"
 location: "Munich, Germany"

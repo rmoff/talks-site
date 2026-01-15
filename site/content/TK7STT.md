@@ -1,6 +1,7 @@
 ---
 title: "No More Silos: Integrating Databases and Apache Kafka"
 slug: "no-more-silos-integrating-databases-and-apache-kafka-TK7STT"
+aliases: ["/TK7STT/no-more-silos-integrating-databases-and-apache-kafka"]
 date: 2018-12-03T08:00:00
 event: "UKOUG 2018"
 location: "Liverpool, UK"

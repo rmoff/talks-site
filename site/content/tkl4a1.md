@@ -1,6 +1,7 @@
 ---
 title: "Apache Kafka and ksqlDB in Action: Let’s Build a Streaming Data Pipeline!"
 slug: "apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline-tkl4a1"
+aliases: ["/tkl4a1/apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline"]
 date: 2020-09-23T08:00:00
 event: "Big Data LDN"
 location: "Virtual"

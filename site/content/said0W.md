@@ -1,6 +1,7 @@
 ---
 title: "The Changing Face of ETL: Event-Driven Architectures for Data Engineers"
 slug: "the-changing-face-of-etl-event-driven-architectures-for-data-engineers-said0W"
+aliases: ["/said0W/the-changing-face-of-etl-event-driven-architectures-for-data-engineers"]
 date: 2019-03-19T08:00:00
 event: "Paris Apache Kafka Meetup"
 location: "Paris, France"

@@ -1,6 +1,7 @@
 ---
 title: "🤖Building a Telegram bot with Apache Kafka and ksqlDB"
 slug: "building-a-telegram-bot-with-apache-kafka-and-ksqldb-QbFIWM"
+aliases: ["/QbFIWM/building-a-telegram-bot-with-apache-kafka-and-ksqldb"]
 date: 2020-10-22T08:00:00
 event: "Big Mountain Data and Dev Conference"
 location: "Virtual"

@@ -1,6 +1,7 @@
 ---
 title: "From Zero to Hero with Kafka Connect"
 slug: "from-zero-to-hero-with-kafka-connect-Jcugyt"
+aliases: ["/Jcugyt/from-zero-to-hero-with-kafka-connect"]
 date: 2019-10-17T08:00:00
 event: "Crunch Data Conference"
 location: "Budapest, Hungary"

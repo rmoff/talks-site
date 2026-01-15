@@ -1,6 +1,7 @@
 ---
 title: "Apache Kafka and ksqlDB in Action: Let’s Build a Streaming Data Pipeline!"
 slug: "apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline-3RIbSX"
+aliases: ["/3RIbSX/apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline"]
 date: 2021-06-24T08:00:00
 event: "Apache Kafka meetup"
 location: "Virtual"

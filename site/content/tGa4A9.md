@@ -1,6 +1,7 @@
 ---
 title: "Kafka as a Platform: the Ecosystem from the Ground Up"
 slug: "kafka-as-a-platform-the-ecosystem-from-the-ground-up-tGa4A9"
+aliases: ["/tGa4A9/kafka-as-a-platform-the-ecosystem-from-the-ground-up"]
 date: 2021-05-25T08:00:00
 event: "DevSum"
 location: "Virtual"

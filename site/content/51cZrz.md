@@ -1,6 +1,7 @@
 ---
 title: "🚂 On Track with Apache Kafka: Building a Streaming ETL solution with Rail Data"
 slug: "on-track-with-apache-kafka-building-a-streaming-etl-solution-with-rail-data-51cZrz"
+aliases: ["/51cZrz/on-track-with-apache-kafka-building-a-streaming-etl-solution-with-rail-data"]
 date: 2021-03-22T08:00:00
 event: "Apache Kafka Meetup"
 location: "Virtual"

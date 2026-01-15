@@ -1,6 +1,7 @@
 ---
 title: "The Changing Face of ETL: Event-Driven Architectures for Data Engineers"
 slug: "the-changing-face-of-etl-event-driven-architectures-for-data-engineers-A4pLsH"
+aliases: ["/A4pLsH/the-changing-face-of-etl-event-driven-architectures-for-data-engineers"]
 date: 2019-10-24T08:00:00
 event: "Code.Talks"
 location: "Hamburg, Germany"

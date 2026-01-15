@@ -1,6 +1,7 @@
 ---
 title: "No More Silos: Integrating Databases and Apache Kafka"
 slug: "no-more-silos-integrating-databases-and-apache-kafka-gnw8Mf"
+aliases: ["/gnw8Mf/no-more-silos-integrating-databases-and-apache-kafka"]
 date: 2019-10-24T08:00:00
 event: "Code.Talks"
 location: "Hamburg, Germany"

@@ -1,6 +1,7 @@
 ---
 title: "From Zero to Hero with Kafka Connect"
 slug: "from-zero-to-hero-with-kafka-connect-1MO6vK"
+aliases: ["/1MO6vK/from-zero-to-hero-with-kafka-connect"]
 date: 2020-07-08T08:00:00
 event: "Confluent VUG"
 location: "Virtual"

@@ -1,6 +1,7 @@
 ---
 title: "No More Silos: Integrating Databases and Apache Kafka"
 slug: "no-more-silos-integrating-databases-and-apache-kafka-eGacLb"
+aliases: ["/eGacLb/no-more-silos-integrating-databases-and-apache-kafka"]
 date: 2019-04-02T08:00:00
 event: "Kafka Summit New York 2019"
 location: "New York, NY, USA"

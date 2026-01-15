@@ -1,6 +1,7 @@
 ---
 title: "Apache Kafka and KSQL in Action : Let’s Build a Streaming Data Pipeline!"
 slug: "apache-kafka-and-ksql-in-action-let-s-build-a-streaming-data-pipeline-cjkboB"
+aliases: ["/cjkboB/apache-kafka-and-ksql-in-action-let-s-build-a-streaming-data-pipeline"]
 date: 2018-07-24T08:00:00
 event: "Berlin Kafka Meetup"
 location: "Berlin, Germany"
