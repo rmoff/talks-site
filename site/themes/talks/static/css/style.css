@@ -395,7 +395,7 @@ a:hover {
 
 .talk-hero-title {
     font-family: 'Smooch Sans', sans-serif;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--text-primary);
     margin: 0 0 0.75rem;
@@ -904,7 +904,7 @@ a:hover {
     }
 
     .talk-hero-title {
-        font-size: 1.35rem;
+        font-size: 2rem;
     }
 
     .talk-hero-meta {
@@ -939,7 +939,7 @@ a:hover {
     }
 
     .talk-hero-title {
-        font-size: 1.35rem;
+        font-size: 1.75rem;
     }
 
     .bio-stats {
@@ -966,7 +966,7 @@ a:hover {
     }
 
     .talk-hero-title {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     .talk-hero-meta {
