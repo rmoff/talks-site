@@ -5,7 +5,9 @@
 {{ $talks := $allTalks.ByParam "date" }}
 {{ $recentTalk := index ($talks.Reverse) 0 }}
 
-<div class="hero-section" {{ with $recentTalk.Params.image }}style="background-image: url('{{ . }}');"{{ end }}>
+{{ $heroWebP := "" }}
+{{ with $recentTalk.Params.image }}{{ $heroWebP = replaceRE "\\.[^.]+$" ".webp" . }}{{ end }}
+<div class="hero-section" {{ with $heroWebP }}style="background-image: url('{{ . }}');"{{ end }}>
     <div class="hero-overlay">
         <div class="hero-content">
             <img src="https://on.notist.cloud/profile/pr-rmoff-large-0631f268c74370c9.jpg" alt="Robin Moffatt" class="hero-avatar">
