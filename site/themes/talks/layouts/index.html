@@ -25,20 +25,13 @@
     </div>
 </div>
 
-{{ $talksByYear := dict }}
 {{ $years := slice }}
-
 {{ range $talks.Reverse }}
     {{ $year := dateFormat "2006" .Params.date }}
-    {{ $yearTalks := index $talksByYear $year }}
-    {{ if not $yearTalks }}
-        {{ $yearTalks = slice }}
+    {{ if not (in $years $year) }}
         {{ $years = $years | append $year }}
     {{ end }}
-    {{ $yearTalks = $yearTalks | append . }}
-    {{ $talksByYear = merge $talksByYear (dict $year $yearTalks) }}
 {{ end }}
-
 {{ $years = sort $years "value" "desc" }}
 
 <nav class="year-nav">
@@ -49,80 +42,144 @@
     </div>
 </nav>
 
-<div class="talks-by-year">
-
-    {{ range $years }}
-        {{ $year := . }}
-        {{ $talks := index $talksByYear $year }}
-    <section class="year-section" id="year-{{ $year }}">
-        <h2 class="year-title">{{ $year }}</h2>
-        <div class="year-grid">
-            {{ range $index, $talk := $talks }}
-                {{ $pattern := mod $index 5 }}
-                {{ $sizeClass := "" }}
-
-                {{ if eq $pattern 0 }}
-                    {{ $sizeClass = "primary" }}
-                {{ else }}
-                    {{ $sizeClass = "secondary" }}
+<div class="talks-grid-container">
+    <div class="talks-grid">
+        {{ $allTalksReversed := $talks.Reverse }}
+        {{ $totalTalks := len $allTalksReversed }}
+        {{ range $index, $talk := $allTalksReversed }}
+            {{ $year := dateFormat "2006" $talk.Params.date }}
+            {{/* Check if this is first of year */}}
+            {{ $isFirstOfYear := true }}
+            {{ if gt $index 0 }}
+                {{ $prevTalk := index $allTalksReversed (sub $index 1) }}
+                {{ $prevYear := dateFormat "2006" $prevTalk.Params.date }}
+                {{ $isFirstOfYear = ne $year $prevYear }}
+            {{ end }}
+            {{/* Check if this is last of year */}}
+            {{ $isLastOfYear := true }}
+            {{ $nextIndex := add $index 1 }}
+            {{ if lt $nextIndex $totalTalks }}
+                {{ $nextTalk := index $allTalksReversed $nextIndex }}
+                {{ $nextYear := dateFormat "2006" $nextTalk.Params.date }}
+                {{ $isLastOfYear = ne $year $nextYear }}
+            {{ end }}
+            {{ $cardClass := "talk-card" }}
+            {{ if $isFirstOfYear }}{{ $cardClass = printf "%s year-first" $cardClass }}{{ end }}
+            {{ if $isLastOfYear }}{{ $cardClass = printf "%s year-last" $cardClass }}{{ end }}
+            <article class="{{ $cardClass }}" {{ if $isFirstOfYear }}id="year-{{ $year }}"{{ end }}>
+                {{ if $isFirstOfYear }}
+                <div class="year-badge">// {{ $year }}</div>
                 {{ end }}
-
-                <article class="talk-card {{ $sizeClass }}">
-                    <a href="{{ .RelPermalink }}" class="talk-link">
-                        {{ with .Params.image }}
-                        <div class="talk-thumbnail-wrapper">
-                            {{ partial "responsive-image.html" (dict "src" . "alt" $talk.Title "sizes" "(max-width: 480px) 100vw, (max-width: 900px) 50vw, 400px") }}
-                            {{ with $talk.Params.event }}
-                            <div class="talk-meta-box">
-                                <div class="talk-event">{{ . }}</div>
-                            </div>
-                            {{ end }}
+                <a href="{{ $talk.RelPermalink }}" class="talk-link">
+                    {{ with $talk.Params.image }}
+                    <div class="talk-thumbnail-wrapper">
+                        {{ partial "responsive-image.html" (dict "src" . "alt" $talk.Title "sizes" "(max-width: 480px) 100vw, (max-width: 900px) 50vw, 400px") }}
+                        {{ with $talk.Params.event }}
+                        <div class="talk-meta-box">
+                            <div class="talk-event">{{ . }}</div>
                         </div>
                         {{ end }}
-                        <div class="talk-info">
-                            <h3 class="talk-title">{{ $talk.Title }}</h3>
-                        </div>
-                    </a>
-                </article>
-            {{ end }}
-        </div>
-    </section>
-    {{ end }}
+                    </div>
+                    {{ end }}
+                    <div class="talk-info">
+                        <h3 class="talk-title">{{ $talk.Title }}</h3>
+                    </div>
+                </a>
+            </article>
+        {{ end }}
+    </div>
 </div>
 
 <script>
 (function() {
-    const yearSections = document.querySelectorAll('.year-section');
-    const yearLinks = document.querySelectorAll('.year-nav-link');
+    const yearNav = document.querySelector('.year-nav-inner');
+    const yearCards = Array.from(document.querySelectorAll('article[id^="year-"]'));
 
-    function updateActiveYear() {
-        let currentYear = null;
-        const scrollPos = window.scrollY + 200;
+    // Group years by row position and rebuild nav
+    function buildNav() {
+        if (!yearNav || yearCards.length === 0) return;
 
-        yearSections.forEach(section => {
-            const top = section.offsetTop;
-            const bottom = top + section.offsetHeight;
-            if (scrollPos >= top && scrollPos < bottom) {
-                currentYear = section.id.replace('year-', '');
+        // Get positions of all year cards
+        const yearPositions = yearCards.map(card => ({
+            year: card.id.replace('year-', ''),
+            top: card.getBoundingClientRect().top + window.scrollY,
+            card: card
+        }));
+
+        // Group years by row (within 50px tolerance)
+        const groups = [];
+        let currentGroup = null;
+
+        yearPositions.forEach(item => {
+            if (!currentGroup || Math.abs(item.top - currentGroup.top) > 50) {
+                currentGroup = { top: item.top, years: [item.year], cards: [item.card] };
+                groups.push(currentGroup);
+            } else {
+                currentGroup.years.push(item.year);
+                currentGroup.cards.push(item.card);
             }
         });
 
-        // Default to first year if at top of page
-        if (!currentYear && yearSections.length > 0) {
-            currentYear = yearSections[0].id.replace('year-', '');
-        }
+        // Rebuild nav with grouped years
+        yearNav.innerHTML = '';
+        groups.forEach(group => {
+            const link = document.createElement('a');
+            link.className = 'year-nav-link';
+            link.href = '#year-' + group.years[0];
 
-        yearLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#year-' + currentYear) {
-                link.classList.add('active');
+            if (group.years.length > 1) {
+                // Show range: first-last (abbreviated)
+                const first = group.years[0];
+                const last = group.years[group.years.length - 1];
+                link.textContent = first + '-' + last.slice(-2);
+            } else {
+                link.textContent = group.years[0];
             }
+
+            link.dataset.years = group.years.join(',');
+            yearNav.appendChild(link);
         });
     }
 
+    function updateActiveYear() {
+        const yearLinks = document.querySelectorAll('.year-nav-link');
+        const scrollPos = window.scrollY + 100;
+        let activeLink = null;
+
+        yearCards.forEach(card => {
+            const rect = card.getBoundingClientRect();
+            const top = rect.top + window.scrollY;
+            if (scrollPos >= top - 50) {
+                const year = card.id.replace('year-', '');
+                // Find link that contains this year
+                yearLinks.forEach(link => {
+                    const years = link.dataset.years ? link.dataset.years.split(',') : [];
+                    if (years.includes(year)) {
+                        activeLink = link;
+                    }
+                });
+            }
+        });
+
+        yearLinks.forEach(link => link.classList.remove('active'));
+        if (activeLink) {
+            activeLink.classList.add('active');
+        } else if (yearLinks.length > 0) {
+            yearLinks[0].classList.add('active');
+        }
+    }
+
+    // Build nav after layout is complete
+    window.addEventListener('load', () => {
+        buildNav();
+        updateActiveYear();
+    });
+
     window.addEventListener('scroll', updateActiveYear);
-    window.addEventListener('load', updateActiveYear);
-    setTimeout(updateActiveYear, 100);
+    window.addEventListener('resize', () => {
+        buildNav();
+        updateActiveYear();
+    });
 })();
 </script>
 {{ end }}
