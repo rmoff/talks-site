@@ -1,5 +1,5 @@
 ---
-title: "All Talks - List View"
+title: "Robin Moffatt's Talks Archive"
 type: "list"
 layout: "list"
 ---

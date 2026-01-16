@@ -1,5 +1,5 @@
 ---
-title: "Videos"
+title: "Robin Moffatt's Talks Archive"
 type: "videos"
 layout: "videos"
 ---
