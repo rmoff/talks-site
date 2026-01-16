@@ -1,7 +1,6 @@
 ---
 title: "The Joy of JARs (and Other Flink SQL Troubleshooting Tales)"
 slug: "the-joy-of-jars-and-other-flink-sql-troubleshooting-tales-9GpIYA"
-aliases: ["/9GpIYA/the-joy-of-jars-and-other-flink-sql-troubleshooting-tales"]
 date: 2024-09-17T08:00:00
 event: "Current"
 location: "Austin, TX, USA"
@@ -18,6 +17,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Up next at <a href="https://twitter.com/hashtag/Current24?src=hash&amp;ref_src=twsrc%5Etfw">#Current24</a>: the man, the myth, the legend, the one and only <a href="https://twitter.com/rmoff?ref_src=twsrc%5Etfw">@rmoff</a>, talking about the joys of JARs and Flink SQL troubleshooting. Fun fact: he&#39;s having his one year anniversary at <a href="https://twitter.com/Decodableco?ref_src=twsrc%5Etfw">@Decodableco</a> this week, and we&#39;ve halfway turned him into a Java dev proper already 🤓. <a href="https://t.co/nkQ7MZYIgY">pic.twitter.com/nkQ7MZYIgY</a></p>&mdash; Gunnar Morling 🌍 (@gunnarmorling) <a href="https://twitter.com/gunnarmorling/status/1836496304173727888?ref_src=twsrc%5Etfw">September 18, 2024</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/8LNx4r"></iframe>
 ---
 
 <p>Apache Flink is a powerful thing to work with but, my, it does test one’s patience sometimes ;-) Particularly if you’re new to using it, understanding how to troubleshoot problems that arise is an important survival skill to acquire.

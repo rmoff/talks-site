@@ -1,7 +1,6 @@
 ---
 title: "From Zero to Hero with Kafka Connect"
 slug: "from-zero-to-hero-with-kafka-connect-UmOkou"
-aliases: ["/UmOkou/from-zero-to-hero-with-kafka-connect"]
 date: 2020-02-24T08:00:00
 event: "BruJUG / Apache Kafka meetup"
 location: "Brussels, Belgium"

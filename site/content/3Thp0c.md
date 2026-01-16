@@ -1,7 +1,6 @@
 ---
 title: "Building stream processing applications for Apache Kafka using KSQL"
 slug: "building-stream-processing-applications-for-apache-kafka-using-ksql-3Thp0c"
-aliases: ["/3Thp0c/building-stream-processing-applications-for-apache-kafka-using-ksql"]
 date: 2019-11-06T08:00:00
 event: "Copenhagen Kafka Meetup"
 location: "Copenhagen, Denmark"

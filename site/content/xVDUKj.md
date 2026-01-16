@@ -1,7 +1,6 @@
 ---
 title: "🚂 On Track with Apache Kafka: Building a Streaming ETL solution with Rail Data"
 slug: "on-track-with-apache-kafka-building-a-streaming-etl-solution-with-rail-data-xVDUKj"
-aliases: ["/xVDUKj/on-track-with-apache-kafka-building-a-streaming-etl-solution-with-rail-data"]
 date: 2019-12-09T08:00:00
 event: "Confluent Online Talk"
 location: "Virtual"

@@ -1,7 +1,6 @@
 ---
 title: "No More Silos: Integrating Databases and Apache Kafka"
 slug: "no-more-silos-integrating-databases-and-apache-kafka-JOZJms"
-aliases: ["/JOZJms/no-more-silos-integrating-databases-and-apache-kafka"]
 date: 2021-06-14T08:00:00
 event: "Berlin Buzzwords"
 location: "Virtual"
@@ -25,6 +24,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/bbuzz?src=hash&amp;ref_src=twsrc%5Etfw">#bbuzz</a> <a href="https://twitter.com/hashtag/speakerselfie?src=hash&amp;ref_src=twsrc%5Etfw">#speakerselfie</a> <a href="https://t.co/Ko7VQHOFm7">pic.twitter.com/Ko7VQHOFm7</a></p>&mdash; Robin Moffatt 🍻🏃🥓 (@rmoff) <a href="https://twitter.com/rmoff/status/1405205754253131785?ref_src=twsrc%5Etfw">June 16, 2021</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/SSjNNn"></iframe>
 ---
 
 <p>Companies new and old are all recognising the importance of a low-latency, scalable, fault-tolerant data backbone, in the form of the Apache Kafka streaming platform. With Kafka, developers can integrate multiple sources and systems, which enables low latency analytics, event-driven architectures and the population of multiple downstream systems.</p>

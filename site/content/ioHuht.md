@@ -1,13 +1,17 @@
 ---
 title: "From Zero to Hero with Kafka Connect"
 slug: "from-zero-to-hero-with-kafka-connect-ioHuht"
-aliases: ["/ioHuht/from-zero-to-hero-with-kafka-connect"]
 date: 2020-11-24T08:00:00
 event: "Big Data Conference Europe"
 location: "Virtual"
 image: "/images/ioHuht/slide_000.png"
 pdf: "/pdfs/ioHuht.pdf"
 notist_id: "ioHuht"
+embeds:
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/TacKJO"></iframe>
 ---
 
 <p>Integrating Apache Kafka with other systems in a reliable and scalable way is often a key part of a streaming platform. Fortunately, Apache Kafka includes the Connect API that enables streaming integration both in and out of Kafka. Like any technology, understanding its architecture and deployment patterns is key to successful use, as is knowing where to go looking when things aren’t working.</p>

@@ -1,7 +1,6 @@
 ---
 title: "The Changing Face of ETL: Event-Driven Architectures for Data Engineers"
 slug: "the-changing-face-of-etl-event-driven-architectures-for-data-engineers-aCobV0"
-aliases: ["/aCobV0/the-changing-face-of-etl-event-driven-architectures-for-data-engineers"]
 date: 2019-11-05T08:00:00
 event: "Øredev 2019"
 location: "Malmö, Sweden"
@@ -22,6 +21,11 @@ resources:
     url: "https://groups.google.com/forum/#!forum/confluent-platform"
   - title: "💾 Download Confluent Platform"
     url: "https://www.confluent.io/download/"
+embeds:
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/RR97aC"></iframe>
 ---
 
 <p>Data integration in architectures built on static, update-in-place datastores inevitably end up with pathologically high degrees of coupling and poor scalability. This has been the standard practice for decades, as we attempt to build data pipelines on top of databases that do a poor job modeling the fundamental objects that drive our businesses and systems: events.</p>

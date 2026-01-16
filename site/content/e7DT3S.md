@@ -1,7 +1,6 @@
 ---
 title: "Kafka as a Platform: the Ecosystem from the Ground Up"
 slug: "kafka-as-a-platform-the-ecosystem-from-the-ground-up-e7DT3S"
-aliases: ["/e7DT3S/kafka-as-a-platform-the-ecosystem-from-the-ground-up"]
 date: 2022-04-25T08:00:00
 event: "Kafka Summit London 2022"
 location: "London, UK"

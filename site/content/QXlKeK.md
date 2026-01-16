@@ -1,7 +1,6 @@
 ---
 title: "Kafka as a Platform: the Ecosystem from the Ground Up"
 slug: "kafka-as-a-platform-the-ecosystem-from-the-ground-up-QXlKeK"
-aliases: ["/QXlKeK/kafka-as-a-platform-the-ecosystem-from-the-ground-up"]
 date: 2021-09-21T00:00:00
 event: "ApacheCon"
 location: "Virtual"
@@ -22,6 +21,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/acah2021?src=hash&amp;ref_src=twsrc%5Etfw">#acah2021</a> <a href="https://twitter.com/ApacheCon?ref_src=twsrc%5Etfw">@apachecon</a> <a href="https://twitter.com/hashtag/speakerselfie?src=hash&amp;ref_src=twsrc%5Etfw">#speakerselfie</a> <a href="https://twitter.com/hashtag/streamingselfie?src=hash&amp;ref_src=twsrc%5Etfw">#streamingselfie</a> <a href="https://t.co/9e5ELT8Q6G">pic.twitter.com/9e5ELT8Q6G</a></p>&mdash; Robin Moffatt 🍻🏃🥓 (@rmoff) <a href="https://twitter.com/rmoff/status/1440374292529643535?ref_src=twsrc%5Etfw">September 21, 2021</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/IDS7tQ"></iframe>
 ---
 
 <p>Kafka has become a key data infrastructure technology, and we all have at least a vague sense that it is a messaging system, but what else is it? How can an overgrown message bus be getting this much buzz? Well, because Kafka is merely the center of a rich streaming data platform that invites detailed exploration.</p>

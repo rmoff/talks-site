@@ -1,0 +1,34 @@
+{{/* Hero Section with bio and navigation - used on homepage, videos, and list pages */}}
+{{ $pages := where .Site.RegularPages "Type" "!=" "videos" }}
+{{ $pages = where $pages "Type" "!=" "list" }}
+{{ $pages = where $pages "Type" "!=" "bio" }}
+{{ $recentTalk := index $pages.ByDate.Reverse 0 }}
+{{ $heroWebP := "" }}
+{{ with $recentTalk.Params.image }}{{ $heroWebP = replaceRE "\\.[^.]+$" ".webp" . }}{{ end }}
+
+<div class="hero-section" {{ with $heroWebP }}style="background-image: url('{{ . }}');"{{ end }}>
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <img src="https://on.notist.cloud/profile/pr-rmoff-large-0631f268c74370c9.jpg" alt="Robin Moffatt" class="hero-avatar">
+            <div class="hero-text">
+                <div class="hero-header">
+                    <h1 class="hero-tagline">Robin Moffatt</h1>
+                    <nav class="hero-nav">
+                        <a href="https://rmoff.net" target="_blank" title="Blog: rmoff.net"><i class="fas fa-house"></i></a>
+                        <a href="https://youtube.com/rmoff" target="_blank" title="YouTube: youtube.com/rmoff"><i class="fab fa-youtube"></i></a>
+                        {{ with .Site.Params.twitter }}<a href="https://twitter.com/{{ . }}" target="_blank" title="Twitter: @{{ . }}"><i class="fab fa-twitter"></i></a>{{ end }}
+                        <a href="https://bsky.app/profile/rmoff.net" target="_blank" title="Bluesky: @rmoff.net"><i class="fa-brands fa-bluesky"></i></a>
+                        <a href="https://www.linkedin.com/in/robinmoffatt" target="_blank" title="LinkedIn: robinmoffatt"><i class="fab fa-linkedin"></i></a>
+                        {{ with .Site.Params.github }}<a href="https://github.com/{{ . }}" target="_blank" title="GitHub: {{ . }}"><i class="fab fa-github"></i></a>{{ end }}
+                    </nav>
+                </div>
+                <p class="hero-bio">Robin is a Principal DevEx Engineer.<br><br>He has been speaking at conferences since 2009 including QCon, Devoxx, Strata, Kafka Summit, and Øredev.<br><br>You can read his <a href="http://rmoff.net/">blog</a>, follow him on <a href="https://twitter.com/{{ .Site.Params.twitter }}">Twitter</a>, and subscribe to his <a href="http://youtube.com/rmoff">YouTube channel</a>. Outside of work, Robin enjoys running, drinking good beer, and eating fried breakfasts—although generally not at the same time.</p>
+            </div>
+        </div>
+        <div class="hero-page-nav">
+            <a href="/" class="hero-page-link{{ if eq .RelPermalink "/" }} active{{ end }}"><i class="fas fa-th"></i> Thumbnail View</a>
+            <a href="/list/" class="hero-page-link{{ if eq .RelPermalink "/list/" }} active{{ end }}"><i class="fas fa-list"></i> List View</a>
+            <a href="/videos/" class="hero-page-link{{ if eq .RelPermalink "/videos/" }} active{{ end }}"><i class="fas fa-video"></i> Videos</a>
+        </div>
+    </div>
+</div>

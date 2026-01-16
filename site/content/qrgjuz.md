@@ -1,7 +1,6 @@
 ---
 title: "🚢 All at Sea with Streams - Using Kafka to Detect Patterns  in the Behaviour of Ships"
 slug: "all-at-sea-with-streams-using-kafka-to-detect-patterns-in-the-behaviour-of-ships-qrgjuz"
-aliases: ["/qrgjuz/all-at-sea-with-streams-using-kafka-to-detect-patterns-in-the-behaviour-of-ships"]
 date: 2021-09-14T08:00:00
 event: "Kafka Summit Americas"
 location: "Virtual"
@@ -28,6 +27,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Interesting use-case presented by <a href="https://twitter.com/rmoff?ref_src=twsrc%5Etfw">@rmoff</a> at <a href="https://twitter.com/hashtag/KafkaSummit2021?src=hash&amp;ref_src=twsrc%5Etfw">#KafkaSummit2021</a> <a href="https://t.co/USBevRnDW7">https://t.co/USBevRnDW7</a></p>&mdash; David P. (@davpow) <a href="https://twitter.com/davpow/status/1437859564012154880?ref_src=twsrc%5Etfw">September 14, 2021</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/UuRQsv"></iframe>
 ---
 
 <p><strong>This is the recording of my Kafka Summit 2021 talk about doing interesting things with real-time streams of AIS data. It covers both “standard” streaming ETL stuff to build fancy dashboards, as well as using stream processing to identify in real-time ships that may be engaged in transshipping.</strong></p>

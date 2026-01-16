@@ -1,7 +1,6 @@
 ---
 title: "Embrace the Anarchy : Apache Kafka's Role in Modern Data Architectures"
 slug: "embrace-the-anarchy-apache-kafka-s-role-in-modern-data-architectures-LSemuJ"
-aliases: ["/LSemuJ/embrace-the-anarchy-apache-kafka-s-role-in-modern-data-architectures"]
 date: 2018-08-01T08:00:00
 event: "Munich Microservices Meetup"
 location: "Munich, Germany"
@@ -24,6 +23,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Like the business related examples on how to use <a href="https://twitter.com/apachekafka?ref_src=twsrc%5Etfw">@apachekafka</a> by <a href="https://twitter.com/rmoff?ref_src=twsrc%5Etfw">@rmoff</a> at <a href="https://twitter.com/hashtag/Microservice?src=hash&amp;ref_src=twsrc%5Etfw">#Microservice</a> <a href="https://twitter.com/hashtag/Meetup?src=hash&amp;ref_src=twsrc%5Etfw">#Meetup</a> <a href="https://twitter.com/hashtag/munich?src=hash&amp;ref_src=twsrc%5Etfw">#munich</a> <a href="https://t.co/1FPMkpJBnx">pic.twitter.com/1FPMkpJBnx</a></p>&mdash; Gregor Wolf (@wolf_gregor) <a href="https://twitter.com/wolf_gregor/status/1024715377387950080?ref_src=twsrc%5Etfw">August 1, 2018</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/cnEZgD"></iframe>
 ---
 
 <p>Building a flexible, scalable, real-time data architecture for the enterprise is no simple matter. Rarely does one single technology suit for all requirements, and frequently many different teams are involved which drives solutions with varying levels of [dis-]integration.</p>

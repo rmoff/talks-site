@@ -1,7 +1,6 @@
 ---
 title: "From Zero to Hero with Kafka Connect"
 slug: "from-zero-to-hero-with-kafka-connect-TINTXS"
-aliases: ["/TINTXS/from-zero-to-hero-with-kafka-connect"]
 date: 2019-11-07T08:00:00
 event: "Berlin Kafka Meetup"
 location: "Berlin, Germany"

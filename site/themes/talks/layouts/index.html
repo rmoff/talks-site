@@ -1,48 +1,12 @@
 {{ define "main" }}
-{{ $notistTalks := where .Site.RegularPages ".Params.notist_id" "!=" nil }}
-{{ $speakerdeckTalks := where .Site.RegularPages ".Params.speakerdeck_slug" "!=" nil }}
+{{ $pages := where .Site.RegularPages "Type" "!=" "bio" }}
+{{ $notistTalks := where $pages ".Params.notist_id" "!=" nil }}
+{{ $speakerdeckTalks := where $pages ".Params.speakerdeck_slug" "!=" nil }}
 {{ $allTalks := $notistTalks | append $speakerdeckTalks }}
 {{ $talks := $allTalks.ByParam "date" }}
-{{ $recentTalk := index ($talks.Reverse) 0 }}
 
-{{ $heroWebP := "" }}
-{{ with $recentTalk.Params.image }}{{ $heroWebP = replaceRE "\\.[^.]+$" ".webp" . }}{{ end }}
-<div class="hero-section" {{ with $heroWebP }}style="background-image: url('{{ . }}');"{{ end }}>
-    <div class="hero-overlay">
-        <div class="hero-content">
-            <img src="https://on.notist.cloud/profile/pr-rmoff-large-0631f268c74370c9.jpg" alt="Robin Moffatt" class="hero-avatar">
-            <div class="hero-text">
-                <h1 class="hero-tagline">Robin Moffatt</h1>
-                <p class="hero-bio">Principal DevEx Engineer speaking at conferences since 2010 including QCon, Devoxx, and Kafka Summit.</p>
-                <nav class="hero-nav">
-                    <a href="https://rmoff.net" target="_blank" title="Blog: rmoff.net"><i class="fas fa-house"></i></a>
-                    <a href="https://youtube.com/rmoff" target="_blank" title="YouTube: youtube.com/rmoff"><i class="fab fa-youtube"></i></a>
-                    {{ with .Site.Params.twitter }}<a href="https://twitter.com/{{ . }}" target="_blank" title="Twitter: @{{ . }}"><i class="fab fa-twitter"></i></a>{{ end }}
-                    <a href="https://bsky.app/profile/rmoff.net" target="_blank" title="Bluesky: @rmoff.net"><i class="fa-brands fa-bluesky"></i></a>
-                    <a href="https://www.linkedin.com/in/robinmoffatt" target="_blank" title="LinkedIn: robinmoffatt"><i class="fab fa-linkedin"></i></a>
-                    {{ with .Site.Params.github }}<a href="https://github.com/{{ . }}" target="_blank" title="GitHub: {{ . }}"><i class="fab fa-github"></i></a>{{ end }}
-                </nav>
-            </div>
-        </div>
-    </div>
-</div>
-
-{{ $years := slice }}
-{{ range $talks.Reverse }}
-    {{ $year := dateFormat "2006" .Params.date }}
-    {{ if not (in $years $year) }}
-        {{ $years = $years | append $year }}
-    {{ end }}
-{{ end }}
-{{ $years = sort $years "value" "desc" }}
-
-<nav class="year-nav">
-    <div class="year-nav-inner">
-        {{ range $years }}
-        <a href="#year-{{ . }}" class="year-nav-link">{{ . }}</a>
-        {{ end }}
-    </div>
-</nav>
+{{ partial "hero-section.html" . }}
+{{ partial "year-nav.html" . }}
 
 <div class="talks-grid-container">
     <div class="talks-grid">

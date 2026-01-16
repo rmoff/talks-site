@@ -1,7 +1,6 @@
 ---
 title: "The Changing Face of ETL: Event-Driven Architectures for Data Engineers"
 slug: "the-changing-face-of-etl-event-driven-architectures-for-data-engineers-ZPJzzF"
-aliases: ["/ZPJzzF/the-changing-face-of-etl-event-driven-architectures-for-data-engineers"]
 date: 2020-07-01T08:00:00
 event: "Confluent VUG"
 location: "Virtual"

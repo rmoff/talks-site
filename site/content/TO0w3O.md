@@ -1,7 +1,6 @@
 ---
 title: "Apache Kafka and ksqlDB in Action : Let’s Build a Streaming Data Pipeline!"
 slug: "apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline-TO0w3O"
-aliases: ["/TO0w3O/apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline"]
 date: 2020-04-29T08:00:00
 event: "LJC Virtual Meetup"
 location: "London, UK"
@@ -68,6 +67,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/speakerselfie?src=hash&amp;ref_src=twsrc%5Etfw">#speakerselfie</a> <a href="https://twitter.com/ljcjug?ref_src=twsrc%5Etfw">@ljcjug</a> <a href="https://t.co/R2xoYV7Ep4">pic.twitter.com/R2xoYV7Ep4</a></p>&mdash; Robin Moffatt 🍻🏃🥓 (@rmoff) <a href="https://twitter.com/rmoff/status/1255558024275660800?ref_src=twsrc%5Etfw">April 29, 2020</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/miWzSd"></iframe>
 ---
 
 <p>Kafka is a whole lot more than just a message bus! It includes stream processing and integration capabilities, and this talk will be mostly live coding to demonstrate what can be built around it, how to do it - and why to do it.</p>

@@ -1,7 +1,6 @@
 ---
 title: "Building stream processing applications for Apache Kafka using KSQL"
 slug: "building-stream-processing-applications-for-apache-kafka-using-ksql-8KJCku"
-aliases: ["/8KJCku/building-stream-processing-applications-for-apache-kafka-using-ksql"]
 date: 2019-09-17T08:00:00
 event: "Dortmund Kafka Meetup"
 location: "Dortmund, Germany"

@@ -1,7 +1,6 @@
 ---
 title: "Streaming ETL in Practice with Oracle, Apache Kafka, and KSQL"
 slug: "streaming-etl-in-practice-with-oracle-apache-kafka-and-ksql-WaOroJ"
-aliases: ["/WaOroJ/streaming-etl-in-practice-with-oracle-apache-kafka-and-ksql"]
 date: 2019-06-24T08:00:00
 event: "KScope 19"
 location: "Seattle, WA, USA"

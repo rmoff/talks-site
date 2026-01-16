@@ -1,7 +1,6 @@
 ---
 title: "Apache Kafka and ksqlDB in Action: Let’s Build a Streaming Data Pipeline!"
 slug: "apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline-8m4zch"
-aliases: ["/8m4zch/apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline"]
 date: 2020-06-23T08:00:00
 event: "DataXDays"
 location: "Virtual"
@@ -55,6 +54,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/DataXDays?src=hash&amp;ref_src=twsrc%5Etfw">#DataXDays</a> <a href="https://twitter.com/hashtag/speakerselfie?src=hash&amp;ref_src=twsrc%5Etfw">#speakerselfie</a> <a href="https://t.co/SIKa0oFHjQ">pic.twitter.com/SIKa0oFHjQ</a></p>&mdash; Robin Moffatt 🍻🏃🥓 (@rmoff) <a href="https://twitter.com/rmoff/status/1275383081424175105?ref_src=twsrc%5Etfw">June 23, 2020</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/bLMn2f"></iframe>
 ---
 
 <p>Have you ever thought that you needed to be a programmer to do stream processing and build streaming data pipelines? Think again!

@@ -1,7 +1,6 @@
 ---
 title: "🚂 On Track with Apache Kafka: Building a Streaming ETL solution with Rail Data"
 slug: "on-track-with-apache-kafka-building-a-streaming-etl-solution-with-rail-data-T6qpbP"
-aliases: ["/T6qpbP/on-track-with-apache-kafka-building-a-streaming-etl-solution-with-rail-data"]
 date: 2021-11-01T08:00:00
 event: "Devoxx UK"
 location: "London, UK"
@@ -25,6 +24,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/devoxxuk?src=hash&amp;ref_src=twsrc%5Etfw">#devoxxuk</a> <a href="https://twitter.com/hashtag/speakerselfie?src=hash&amp;ref_src=twsrc%5Etfw">#speakerselfie</a> <a href="https://twitter.com/hashtag/streamingselfie?src=hash&amp;ref_src=twsrc%5Etfw">#streamingselfie</a> <a href="https://t.co/qoiQefC6Ry">pic.twitter.com/qoiQefC6Ry</a></p>&mdash; Robin Moffatt 🍻🏃🥓 (@rmoff) <a href="https://twitter.com/rmoff/status/1455511049868873735?ref_src=twsrc%5Etfw">November 2, 2021</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/UDFWVA"></iframe>
 ---
 
 <p>As data engineers, we frequently need to build scalable systems working with data from a variety of sources and with various ingest rates, sizes, and formats. This talk takes an in-depth look at how Apache Kafka can be used to provide a common platform on which to build data infrastructure driving both real-time analytics as well as event-driven applications.</p>

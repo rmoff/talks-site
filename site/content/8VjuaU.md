@@ -1,7 +1,6 @@
 ---
 title: "🐲 Here be Dragons^H^H Stacktraces — Flink SQL for Non-Java Developers"
 slug: "here-be-dragons-h-h-stacktraces-flink-sql-for-non-java-developers-8VjuaU"
-aliases: ["/8VjuaU/here-be-dragons-h-h-stacktraces-flink-sql-for-non-java-developers"]
 date: 2024-03-19T08:00:00
 event: "Kafka Summit 2024"
 location: "London, UK"

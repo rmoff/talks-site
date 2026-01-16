@@ -1,7 +1,6 @@
 ---
 title: "🤖 Building a Telegram bot with Apache Kafka and ksqlDB"
 slug: "building-a-telegram-bot-with-apache-kafka-and-ksqldb-h7fFAR"
-aliases: ["/h7fFAR/building-a-telegram-bot-with-apache-kafka-and-ksqldb"]
 date: 2021-10-05T08:00:00
 event: "JCON 2021"
 location: "Virtual"

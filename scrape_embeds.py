@@ -70,6 +70,19 @@ def extract_vimeo_embeds(html):
 
     return vimeo_embeds
 
+def extract_notist_video_embeds(html):
+    """Extract notist.ninja video iframes from HTML using regex."""
+    notist_embeds = []
+
+    # Pattern to match notist.ninja video iframes
+    pattern = r'<iframe[^>]*(?:src="[^"]*notist\.ninja/embed/[^"]*")[^>]*>.*?</iframe>'
+    matches = re.findall(pattern, html, re.DOTALL | re.IGNORECASE)
+
+    for match in matches:
+        notist_embeds.append(match)
+
+    return notist_embeds
+
 def scrape_presentation_embeds(pres_id, slug):
     """Scrape embeds from a single presentation page."""
     url = f"{BASE_URL}/{USERNAME}/{pres_id}/{slug}"
@@ -84,9 +97,10 @@ def scrape_presentation_embeds(pres_id, slug):
     twitter_embeds = extract_twitter_embeds(html)
     youtube_embeds = extract_youtube_embeds(html)
     vimeo_embeds = extract_vimeo_embeds(html)
+    notist_video_embeds = extract_notist_video_embeds(html)
 
     # Only return if we found something
-    total_embeds = len(twitter_embeds) + len(youtube_embeds) + len(vimeo_embeds)
+    total_embeds = len(twitter_embeds) + len(youtube_embeds) + len(vimeo_embeds) + len(notist_video_embeds)
     if total_embeds > 0:
         return {
             'presentation_id': pres_id,
@@ -94,6 +108,7 @@ def scrape_presentation_embeds(pres_id, slug):
             'twitter_embeds': twitter_embeds,
             'youtube_embeds': youtube_embeds,
             'vimeo_embeds': vimeo_embeds,
+            'notist_video_embeds': notist_video_embeds,
             'embed_count': total_embeds
         }
 

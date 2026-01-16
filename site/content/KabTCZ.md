@@ -1,7 +1,6 @@
 ---
 title: "Apache Kafka and KSQL in Action : Let’s Build a Streaming Data Pipeline!"
 slug: "apache-kafka-and-ksql-in-action-lets-build-a-streaming-data-pipeline-KabTCZ"
-aliases: ["/KabTCZ/apache-kafka-and-ksql-in-action-lets-build-a-streaming-data-pipeline"]
 date: 2019-06-17T08:00:00
 event: "NDC Oslo"
 location: "Oslo, Norway"

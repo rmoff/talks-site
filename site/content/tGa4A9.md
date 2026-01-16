@@ -1,7 +1,6 @@
 ---
 title: "Kafka as a Platform: the Ecosystem from the Ground Up"
 slug: "kafka-as-a-platform-the-ecosystem-from-the-ground-up-tGa4A9"
-aliases: ["/tGa4A9/kafka-as-a-platform-the-ecosystem-from-the-ground-up"]
 date: 2021-05-25T08:00:00
 event: "DevSum"
 location: "Virtual"
@@ -30,6 +29,11 @@ resources:
   - title: "🧩 Confluent Hub"
     url: "https://www.confluent.io/hub/?utm_source=conference&utm_medium=slide&utm_campaign=ty.community.con.rmoff_devsum-2021-05-26&utm_term=rmoff-devx"
     description: "Huge list of connectors for Kafka Connect"
+embeds:
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/IbKRBI"></iframe>
 ---
 
 <p>Kafka has become a key data infrastructure technology, and we all have at least a vague sense that it is a messaging system, but what else is it? How can an overgrown message bus be getting this much buzz? Well, because Kafka is merely the center of a rich streaming data platform that invites detailed exploration.</p>

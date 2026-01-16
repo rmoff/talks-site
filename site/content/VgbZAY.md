@@ -1,7 +1,6 @@
 ---
 title: "From Zero to Hero with Kafka Connect"
 slug: "from-zero-to-hero-with-kafka-connect-VgbZAY"
-aliases: ["/VgbZAY/from-zero-to-hero-with-kafka-connect"]
 date: 2020-11-17T08:00:00
 event: "Data + AI Summit Europe"
 location: "Virtual"
@@ -50,6 +49,11 @@ resources:
   - title: "🚂On Track with Apache Kafka: Building a Streaming Platform solution with Rail Data"
     url: "https://rmoff.dev/oredev19-on-track-with-kafka"
     description: "Apache Kafka and Confluent Platform in Action! Using live streams of rail movement data in all sorts of useful ways for analysis and applications."
+embeds:
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/rGtWQz"></iframe>
 ---
 
 <p>Integrating Apache Kafka with other systems in a reliable and scalable way is often a key part of a streaming platform. Fortunately, Apache Kafka includes the Connect API that enables streaming integration both in and out of Kafka. Like any technology, understanding its architecture and deployment patterns is key to successful use, as is knowing where to go looking when things aren’t working.</p>

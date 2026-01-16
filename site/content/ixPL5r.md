@@ -1,7 +1,6 @@
 ---
 title: "Integrating Oracle and Kafka"
 slug: "integrating-oracle-and-kafka-ixPL5r"
-aliases: ["/ixPL5r/integrating-oracle-and-kafka"]
 date: 2020-06-15T08:00:00
 event: "ACEs @ Home"
 location: "Virtual"
@@ -54,6 +53,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/ACEsAtHome?src=hash&amp;ref_src=twsrc%5Etfw">#ACEsAtHome</a> <a href="https://twitter.com/hashtag/speakerselfie?src=hash&amp;ref_src=twsrc%5Etfw">#speakerselfie</a> <a href="https://t.co/LRn4eLl2Uy">pic.twitter.com/LRn4eLl2Uy</a></p>&mdash; Robin Moffatt 🍻🏃🥓 (@rmoff) <a href="https://twitter.com/rmoff/status/1272518838442172416?ref_src=twsrc%5Etfw">June 15, 2020</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/ukr4Lm"></iframe>
 ---
 
 <p>For all its quirks and licence fees, we all love Oracle for what it does. But sometimes we want to get the data out to use elsewhere. Maybe we want to build analytics on it; perhaps we want to drive applications with it; sometimes we might even want to move it to another non-Oracle database—can you imagine that! 😱</p>

@@ -1,7 +1,6 @@
 ---
 title: "The Changing Face of ETL: Event-Driven Architectures for Data Engineers"
 slug: "the-changing-face-of-etl-event-driven-architectures-for-data-engineers-said0W"
-aliases: ["/said0W/the-changing-face-of-etl-event-driven-architectures-for-data-engineers"]
 date: 2019-03-19T08:00:00
 event: "Paris Apache Kafka Meetup"
 location: "Paris, France"
@@ -21,6 +20,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr"><a href="https://twitter.com/rmoff?ref_src=twsrc%5Etfw">@rmoff</a> being excited to present at the French Kafka Meetup <a href="https://t.co/Sky10mSoRc">pic.twitter.com/Sky10mSoRc</a></p>&mdash; Stephane Maarek (@stephanemaarek) <a href="https://twitter.com/stephanemaarek/status/1108071692650332166?ref_src=twsrc%5Etfw">March 19, 2019</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/riFnat"></iframe>
 ---
 
 <p>Data integration in architectures built on static, update-in-place datastores inevitably end up with pathologically high degrees of coupling and poor scalability. This has been the standard practice for decades, as we attempt to build data pipelines on top of databases that do a poor job modeling the fundamental objects that drive our businesses and systems: events.</p>

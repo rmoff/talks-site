@@ -1,0 +1,84 @@
+{{/*
+  Video Embed Partial
+  Converts video URLs to embedded iframe players
+  Supports: YouTube, Vimeo, Confluent Videos
+
+  Usage: {{ partial "video-embed.html" (dict "url" .url "title" .title) }}
+*/}}
+
+{{ $url := .url }}
+{{ $title := .title | default "Video" }}
+{{ $videoId := "" }}
+{{ $platform := "" }}
+
+{{/* Detect YouTube */}}
+{{ if or (in $url "youtube.com/watch") (in $url "youtu.be/") }}
+  {{ $platform = "youtube" }}
+  {{ if in $url "youtube.com/watch" }}
+    {{/* Extract video ID from youtube.com/watch?v=VIDEO_ID */}}
+    {{ $parts := split $url "v=" }}
+    {{ if gt (len $parts) 1 }}
+      {{ $videoId = index (split (index $parts 1) "&") 0 }}
+    {{ end }}
+  {{ else if in $url "youtu.be/" }}
+    {{/* Extract video ID from youtu.be/VIDEO_ID */}}
+    {{ $parts := split $url "youtu.be/" }}
+    {{ if gt (len $parts) 1 }}
+      {{ $videoId = index (split (index $parts 1) "?") 0 }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Detect Vimeo */}}
+{{ if in $url "vimeo.com/" }}
+  {{ $platform = "vimeo" }}
+  {{/* Extract video ID from vimeo.com/VIDEO_ID */}}
+  {{ $parts := split $url "vimeo.com/" }}
+  {{ if gt (len $parts) 1 }}
+    {{ $videoId = index (split (index $parts 1) "?") 0 }}
+    {{ $videoId = index (split $videoId "/") 0 }}
+  {{ end }}
+{{ end }}
+
+{{/* Detect Confluent Videos */}}
+{{ if in $url "videos.confluent.io" }}
+  {{ $platform = "confluent" }}
+  {{/* Extract video ID from videos.confluent.io/watch/VIDEO_ID */}}
+  {{ $parts := split $url "/watch/" }}
+  {{ if gt (len $parts) 1 }}
+    {{ $videoId = index (split (index $parts 1) "?") 0 }}
+  {{ end }}
+{{ end }}
+
+{{/* Render embed based on platform */}}
+{{ if eq $platform "youtube" }}
+<div class="video-embed" data-platform="youtube">
+  <iframe
+    src="https://www.youtube.com/embed/{{ $videoId }}"
+    title="{{ $title }}"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
+</div>
+{{ else if eq $platform "vimeo" }}
+<div class="video-embed" data-platform="vimeo">
+  <iframe
+    src="https://player.vimeo.com/video/{{ $videoId }}"
+    title="{{ $title }}"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+{{ else if eq $platform "confluent" }}
+<div class="video-embed" data-platform="confluent">
+  <iframe
+    src="https://videos.confluent.io/watch/{{ $videoId }}"
+    title="{{ $title }}"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
+{{ end }}

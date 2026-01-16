@@ -1,7 +1,6 @@
 ---
 title: "From Zero to Hero with Kafka Connect"
 slug: "from-zero-to-hero-with-kafka-connect-0DQPfm"
-aliases: ["/0DQPfm/from-zero-to-hero-with-kafka-connect"]
 date: 2019-10-21T08:00:00
 event: "Voxxed Microservices"
 location: "Paris, France"
@@ -28,6 +27,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr"><a href="https://twitter.com/rmoff?ref_src=twsrc%5Etfw">@rmoff</a> through kafka connect reality, nice practices and warnings before starting using it in prod. <a href="https://twitter.com/vxdmicroservice?ref_src=twsrc%5Etfw">@vxdmicroservice</a> <a href="https://twitter.com/hashtag/VoxxedMicroservices?src=hash&amp;ref_src=twsrc%5Etfw">#VoxxedMicroservices</a> <a href="https://t.co/6Z3z74IAiM">pic.twitter.com/6Z3z74IAiM</a></p>&mdash; Philippe Anes (@philatdev) <a href="https://twitter.com/philatdev/status/1186269594698371073?ref_src=twsrc%5Etfw">October 21, 2019</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/GZEfu3"></iframe>
 ---
 
 <p>Integrating Apache Kafka with other systems in a reliable and scalable way is often a key part of a streaming platform. Fortunately, Apache Kafka includes the Connect API that enables streaming integration both in and out of Kafka. Like any technology, understanding its architecture and deployment patterns is key to successful use, as is knowing where to go looking when things aren’t working.</p>

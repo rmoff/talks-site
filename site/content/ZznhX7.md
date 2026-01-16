@@ -1,12 +1,16 @@
 ---
 title: "ATM Fraud detection with Kafka and KSQL"
 slug: "atm-fraud-detection-with-kafka-and-ksql-ZznhX7"
-aliases: ["/ZznhX7/atm-fraud-detection-with-kafka-and-ksql"]
 date: 2018-12-10T08:00:00
 event: "IT Tage"
 location: "Frankfurt, Germany"
 image: "/images/ZznhX7/slide_000.jpg"
 notist_id: "ZznhX7"
+embeds:
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                                                            src="https://notist.ninja/embed/tjGoYB"></iframe>
 ---
 
 <p>Detecting fraudulent activity in real time can save a business significant amounts of money, but has traditionally been an area requiring a lot of complex programming and frameworks, particularly at scale. Using KSQL, it’s possible to use just SQL to build scalable real-time applications.</p>

@@ -1,7 +1,6 @@
 ---
 title: "Apache Kafka and ksqlDB in Action : Let’s Build a Streaming Data Pipeline!"
 slug: "apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline-5H2hNx"
-aliases: ["/5H2hNx/apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline"]
 date: 2020-03-04T08:00:00
 event: "London Apache Kafka Meetup"
 location: "London, UK"

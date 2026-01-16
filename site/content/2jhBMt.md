@@ -1,7 +1,6 @@
 ---
 title: "Building stream processing applications for Apache Kafka using KSQL"
 slug: "building-stream-processing-applications-for-apache-kafka-using-ksql-2jhBMt"
-aliases: ["/2jhBMt/building-stream-processing-applications-for-apache-kafka-using-ksql"]
 date: 2019-09-16T08:00:00
 event: "Rome Kafka Meetup"
 location: "Rome, Metropolitan City of Rome, Italy"

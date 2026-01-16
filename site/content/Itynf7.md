@@ -1,7 +1,6 @@
 ---
 title: "From Zero to Hero with Kafka Connect"
 slug: "from-zero-to-hero-with-kafka-connect-Itynf7"
-aliases: ["/Itynf7/from-zero-to-hero-with-kafka-connect"]
 date: 2020-03-23T08:00:00
 event: "Apache Kafka Meetup"
 location: "Virtual"

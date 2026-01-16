@@ -1,7 +1,6 @@
 ---
 title: "Real-time SQL stream processing at scale with Apache Kafka and KSQL"
 slug: "real-time-sql-stream-processing-at-scale-with-apache-kafka-and-ksql-3tK7EV"
-aliases: ["/3tK7EV/real-time-sql-stream-processing-at-scale-with-apache-kafka-and-ksql"]
 date: 2019-04-30T08:00:00
 event: "Strata Data Conference, London"
 location: "London, UK"
@@ -22,6 +21,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Learned a lot today about KSQL during the <a href="https://twitter.com/hashtag/StrataData?src=hash&amp;ref_src=twsrc%5Etfw">#StrataData</a> workshop &quot;Real-time SQL stream processing at scale with <a href="https://twitter.com/apachekafka?ref_src=twsrc%5Etfw">@ApacheKafka</a> and <a href="https://twitter.com/hashtag/KSQL?src=hash&amp;ref_src=twsrc%5Etfw">#KSQL</a>&quot;. <br>Thanks <a href="https://twitter.com/rmoff?ref_src=twsrc%5Etfw">@rmoff</a> and <a href="https://twitter.com/jakekorab?ref_src=twsrc%5Etfw">@jakekorab</a> for sharing. <a href="https://t.co/nYYjyne0Aw">pic.twitter.com/nYYjyne0Aw</a></p>&mdash; Sharif Abdel-Halim (@sharif_halim) <a href="https://twitter.com/sharif_halim/status/1123292964816674816?ref_src=twsrc%5Etfw">April 30, 2019</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                                                            src="https://notist.ninja/embed/5DoSQ6"></iframe>
 ---
 
 <p>Have you ever thought that you needed to be a programmer to do stream processing and build streaming data pipelines? Think again. Apache Kafka is a distributed, scalable, and fault-tolerant streaming platform that provides low-latency pub-sub messaging coupled with a native storage and stream processing capabilities. Integrating Kafka with RDBMS, NoSQL, and object stores is simple with Kafka Connect, part of Apache Kafka. KSQL—the open source SQL streaming engine for Apache Kafka—makes it possible to build stream processing applications at scale, written using a familiar SQL interface.</p>

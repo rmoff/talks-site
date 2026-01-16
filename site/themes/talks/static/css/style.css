@@ -72,8 +72,10 @@ a:hover {
 
 .hero-overlay {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1.5rem;
     padding: 3rem 2rem;
     /* Full-section blur */
     background: rgba(13, 17, 23, 0.7);
@@ -103,13 +105,22 @@ a:hover {
 
 .hero-text {
     text-align: left;
+    flex: 1;
+}
+
+.hero-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .hero-tagline {
     font-family: 'Smooch Sans', sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
-    margin: 0 0 0.5rem;
+    margin: 0;
     line-height: 1;
     color: var(--text-primary);
     letter-spacing: -0.02em;
@@ -123,9 +134,20 @@ a:hover {
     line-height: 1.5;
 }
 
+.hero-bio a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(240, 180, 41, 0.3);
+}
+
+.hero-bio a:hover {
+    border-bottom-color: var(--accent);
+}
+
 .hero-nav {
     display: flex;
     gap: 0.5rem;
+    flex-shrink: 0;
 }
 
 .hero-nav a {
@@ -147,6 +169,91 @@ a:hover {
     color: var(--accent);
     border-color: var(--accent);
     text-decoration: none;
+}
+
+.hero-page-nav {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.hero-page-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.hero-page-link:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
+    border-color: var(--accent);
+    text-decoration: none;
+}
+
+.hero-page-link.active {
+    background: var(--accent);
+    color: var(--bg-primary);
+    border-color: var(--accent);
+}
+
+.hero-page-link i {
+    font-size: 0.85rem;
+}
+
+/* Back Navigation - Floating Sidebar */
+.talk-back-nav {
+    position: fixed;
+    left: 1rem;
+    top: 2rem;
+    z-index: 100;
+}
+
+.talk-back-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: all 0.2s;
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
+    border-radius: 6px;
+}
+
+.talk-back-link span {
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.talk-back-link:hover {
+    color: var(--accent);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+}
+
+.talk-back-link:hover span {
+    max-width: 100px;
+    opacity: 1;
+    margin-left: 0.25rem;
+}
+
+.talk-back-link i {
+    font-size: 1.2rem;
 }
 
 /* Year Navigation - Floating Sidebar */
@@ -377,16 +484,23 @@ a:hover {
     position: absolute;
     top: 1rem;
     left: 1.5rem;
-    color: var(--text-secondary);
+    color: var(--bg-primary);
+    background: var(--accent);
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.8rem;
+    font-weight: 600;
     text-decoration: none;
-    transition: color 0.2s;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 1px solid var(--accent);
+    transition: all 0.2s;
 }
 
 .talk-hero-back:hover {
-    color: var(--accent);
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
     text-decoration: none;
+    transform: translateX(-2px);
 }
 
 .talk-hero-content {
@@ -843,13 +957,21 @@ a:hover {
     color: var(--accent);
 }
 
+.footer-credits {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .talks-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .year-nav {
+    .year-nav,
+    .talk-back-nav {
         display: none;
     }
 }
@@ -889,6 +1011,12 @@ a:hover {
         text-align: center;
     }
 
+    .hero-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
     .hero-tagline {
         font-size: 1.75rem;
     }
@@ -898,6 +1026,11 @@ a:hover {
     }
 
     .hero-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-page-nav {
         justify-content: center;
         flex-wrap: wrap;
     }
@@ -985,5 +1118,413 @@ a:hover {
 
     .talk-single {
         padding: 1.5rem;
+    }
+}
+
+/* Video Embeds */
+.talk-videos {
+    margin-bottom: 2.5rem;
+    scroll-margin-top: 2rem;
+}
+
+.talk-videos h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 0 0 1rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+}
+
+.video-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.video-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid var(--border);
+}
+
+.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-embed.notist-video {
+    padding-bottom: 56.25%; /* 16:9 aspect ratio for notist videos */
+}
+
+.video-embed.notist-video iframe {
+    border: none;
+}
+
+.video-title {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Videos Page */
+.videos-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.videos-list-container {
+    padding: 0;
+}
+
+.videos-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.videos-count p {
+    margin: 0;
+}
+
+
+.videos-grid-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 14px;
+    align-items: start;
+}
+
+.video-card {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    overflow: visible;
+    transition: all 0.12s ease-out;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* Year bookend styling on video cards */
+.video-card.year-first::before,
+.video-card.year-last::after {
+    content: "";
+    position: absolute;
+    border: 2px solid var(--accent);
+    pointer-events: none;
+    z-index: 20;
+}
+
+.video-card.year-first::before {
+    top: -8px;
+    left: -8px;
+    width: 24px;
+    height: 24px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.video-card.year-last::after {
+    bottom: -8px;
+    right: -8px;
+    width: 24px;
+    height: 24px;
+    border-left: none;
+    border-top: none;
+}
+
+.video-card[id^="year-"] {
+    scroll-margin-top: 2rem;
+}
+
+.video-card .year-badge {
+    position: absolute;
+    top: -1.5rem;
+    left: -8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    z-index: 25;
+}
+
+.video-card:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--crt-green);
+    box-shadow: var(--crt-glow);
+    transform: translateY(-2px);
+}
+
+.video-card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.video-card-link:hover {
+    text-decoration: none;
+}
+
+.video-card-thumbnail {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: var(--bg-primary);
+}
+
+.video-card-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.9;
+    transition: all 0.2s;
+}
+
+.video-card:hover .video-card-thumbnail img {
+    opacity: 1;
+    filter: brightness(1.1);
+}
+
+.video-play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s;
+    pointer-events: none;
+}
+
+.video-card:hover .video-play-overlay {
+    color: var(--accent);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-card-info {
+    padding: 1rem;
+}
+
+.video-card-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin: 0 0 0.75rem;
+    line-height: 1.4;
+}
+
+.video-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.video-card-event {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.video-card-date::before,
+.video-card-location::before {
+    content: "/";
+    margin-right: 0.5rem;
+    color: var(--text-muted);
+}
+
+.video-card-resource {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.video-card-resource i {
+    color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .videos-grid-list {
+        grid-template-columns: 1fr;
+    }
+
+    .videos-page {
+        padding: 1.5rem;
+    }
+}
+
+/* List View Page */
+.list-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.list-container {
+    padding: 0;
+}
+
+.list-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.list-count p {
+    margin: 0;
+}
+
+.list-year-section {
+    margin-bottom: 3rem;
+    scroll-margin-top: 2rem;
+}
+
+.list-year-heading {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent);
+}
+
+.talks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.talk-list-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--border);
+    transition: all 0.2s;
+}
+
+.talk-list-item:hover {
+    background: var(--bg-tertiary);
+    border-left-color: var(--accent);
+}
+
+.talk-list-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    color: inherit;
+    text-decoration: none;
+    gap: 1rem;
+}
+
+.talk-list-link:hover {
+    text-decoration: none;
+}
+
+.talk-list-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.talk-list-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin: 0 0 0.5rem;
+    line-height: 1.4;
+}
+
+.talk-list-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.talk-list-event {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.talk-list-date::before,
+.talk-list-location::before {
+    content: "/";
+    margin-right: 0.5rem;
+    color: var(--text-muted);
+}
+
+.talk-list-icons {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.talk-list-icons i {
+    transition: color 0.2s;
+}
+
+.talk-list-item:hover .talk-list-icons i {
+    color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .list-page {
+        padding: 1.5rem;
+    }
+
+    .talk-list-link {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .talk-list-icons {
+        align-self: flex-start;
     }
 }

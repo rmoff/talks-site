@@ -11,9 +11,17 @@
 {{ with .Params.image }}
 {{ $heroWebP = replaceRE "\\.[^.]+$" ".webp" . }}
 {{ end }}
+
+{{/* Back navigation in left gutter */}}
+<nav class="talk-back-nav">
+    <a href="{{ .Site.BaseURL }}" class="talk-back-link">
+        <i class="fas fa-arrow-left"></i>
+        <span>All Talks</span>
+    </a>
+</nav>
+
 <div class="talk-hero" {{ with $heroWebP }}style="background-image: url('{{ . }}');"{{ end }}>
     <div class="talk-hero-overlay">
-        <a href="{{ .Site.BaseURL }}" class="talk-hero-back">&larr; All Talks</a>
         <div class="talk-hero-content">
             <h1 class="talk-hero-title">{{ .Title }}</h1>
             <div class="talk-hero-meta">
@@ -58,11 +66,56 @@
         </div>
     </div>
 
-    {{ with .Params.resources }}
+    {{/* Extract videos from resources */}}
+    {{ $videos := slice }}
+    {{ $nonVideoResources := slice }}
+    {{ range .Params.resources }}
+        {{ $url := .url }}
+        {{ if or (in $url "youtube.com/watch") (in $url "youtu.be/") (in $url "vimeo.com/") (in $url "videos.confluent.io") }}
+            {{ $videos = $videos | append . }}
+        {{ else }}
+            {{ $nonVideoResources = $nonVideoResources | append . }}
+        {{ end }}
+    {{ end }}
+
+    {{/* Extract video embeds from front matter */}}
+    {{ $notistVideos := slice }}
+    {{ range .Params.embeds }}
+        {{ if eq .type "notist_video" }}
+            {{ $notistVideos = $notistVideos | append . }}
+        {{ end }}
+    {{ end }}
+
+    {{/* Display all videos (from resources and embeds) */}}
+    {{ if or $videos $notistVideos }}
+    <div class="talk-videos" id="video">
+        <h2>Video{{ if gt (add (len $videos) (len $notistVideos)) 1 }}s{{ end }}</h2>
+        <div class="videos-grid">
+            {{/* Display resource videos first */}}
+            {{ range $videos }}
+            <div class="video-wrapper">
+                {{ partial "video-embed.html" (dict "url" .url "title" .title) }}
+                <p class="video-title">{{ .title }}</p>
+            </div>
+            {{ end }}
+            {{/* Then display notist video embeds */}}
+            {{ range $notistVideos }}
+            <div class="video-wrapper">
+                <div class="video-embed notist-video" data-embed-type="notist_video">
+                    {{ .html | safeHTML }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+
+    {{/* Display non-video resources */}}
+    {{ if $nonVideoResources }}
     <div class="talk-resources">
         <h2>Resources</h2>
         <ul>
-            {{ range . }}
+            {{ range $nonVideoResources }}
             <li>
                 <a href="{{ .url }}" target="_blank">{{ .title }}</a>
                 {{ with .description }}<p>{{ . | safeHTML }}</p>{{ end }}
@@ -72,17 +125,27 @@
     </div>
     {{ end }}
 
+    {{/* Display social media embeds (non-video embeds) */}}
     {{ with .Params.embeds }}
+    {{ $socialEmbeds := slice }}
+    {{ range . }}
+        {{ if ne .type "notist_video" }}
+            {{ $socialEmbeds = $socialEmbeds | append . }}
+        {{ end }}
+    {{ end }}
+
+    {{ if $socialEmbeds }}
     <div class="talk-embeds">
         <h2>Social Media</h2>
         <div class="embeds-list">
-            {{ range . }}
+            {{ range $socialEmbeds }}
             <div class="embed-item" data-embed-type="{{ .type }}">
                 {{ .html | safeHTML }}
             </div>
             {{ end }}
         </div>
     </div>
+    {{ end }}
     {{ end }}
 
 </article>

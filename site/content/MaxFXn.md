@@ -1,7 +1,6 @@
 ---
 title: "Kafka as a Platform: the Ecosystem from the Ground Up"
 slug: "kafka-as-a-platform-the-ecosystem-from-the-ground-up-MaxFXn"
-aliases: ["/MaxFXn/kafka-as-a-platform-the-ecosystem-from-the-ground-up"]
 date: 2020-06-08T08:00:00
 event: "NDC Oslo"
 location: "Virtual"
@@ -54,6 +53,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/NDCOslo?src=hash&amp;ref_src=twsrc%5Etfw">#NDCOslo</a> <a href="https://twitter.com/hashtag/speakerselfie?src=hash&amp;ref_src=twsrc%5Etfw">#speakerselfie</a> <a href="https://t.co/iT3CHLYnqN">pic.twitter.com/iT3CHLYnqN</a></p>&mdash; Robin Moffatt 🍻🏃🥓 (@rmoff) <a href="https://twitter.com/rmoff/status/1271012851826688000?ref_src=twsrc%5Etfw">June 11, 2020</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/5k8xTs"></iframe>
 ---
 
 <p>Kafka has become a key data infrastructure technology, and we all have at least a vague sense that it is a messaging system, but what else is it? How can an overgrown message bus be getting this much buzz? Well, because Kafka is merely the center of a rich streaming data platform that invites detailed exploration.</p>

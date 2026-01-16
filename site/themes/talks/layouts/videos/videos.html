@@ -1,0 +1,171 @@
+{{ define "main" }}
+{{ partial "hero-section.html" . }}
+
+<div class="videos-page">
+    <div class="videos-list-container">
+        {{/* Get all pages from content directory except special pages */}}
+        {{ $pages := where .Site.RegularPages "Type" "!=" "videos" }}
+        {{ $pages = where $pages "Type" "!=" "list" }}
+        {{ $pages = where $pages "Type" "!=" "bio" }}
+
+        {{/* Filter pages that have video resources or video embeds */}}
+        {{ $videoPosts := slice }}
+        {{ range $pages }}
+            {{ $hasVideo := false }}
+
+            {{/* Check for video URLs in resources */}}
+            {{ range .Params.resources }}
+                {{ $url := .url }}
+                {{ if or (in $url "youtube.com/watch") (in $url "youtu.be/") (in $url "vimeo.com/") (in $url "vimeo.com/") (in $url "videos.confluent.io") }}
+                    {{ $hasVideo = true }}
+                {{ end }}
+            {{ end }}
+
+            {{/* Check for notist video embeds */}}
+            {{ range .Params.embeds }}
+                {{ if eq .type "notist_video" }}
+                    {{ $hasVideo = true }}
+                {{ end }}
+            {{ end }}
+
+            {{ if $hasVideo }}
+                {{ $videoPosts = $videoPosts | append . }}
+            {{ end }}
+        {{ end }}
+
+        {{/* Sort by date for grouping */}}
+        {{ $videoPosts = $videoPosts.ByDate.Reverse }}
+
+        {{/* Build year navigation for videos only */}}
+        {{ $years := slice }}
+        {{ range $videoPosts }}
+            {{ $year := dateFormat "2006" .Params.date }}
+            {{ if not (in $years $year) }}
+                {{ $years = $years | append $year }}
+            {{ end }}
+        {{ end }}
+        {{ $years = sort $years "value" "desc" }}
+
+        <nav class="year-nav">
+            <div class="year-nav-inner">
+                {{ range $years }}
+                <a href="#year-{{ . }}" class="year-nav-link" data-year="{{ . }}">{{ . }}</a>
+                {{ end }}
+            </div>
+        </nav>
+
+        <script>
+        (function() {
+            const yearNav = document.querySelector('.year-nav-inner');
+            const yearLinks = document.querySelectorAll('.year-nav-link');
+
+            if (!yearNav || yearLinks.length === 0) return;
+
+            function updateActiveYear() {
+                const scrollPos = window.scrollY + 150;
+                let activeYear = null;
+
+                // Find all year sections on the page
+                const yearSections = document.querySelectorAll('[id^="year-"]');
+
+                yearSections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const top = rect.top + window.scrollY;
+                    if (scrollPos >= top - 100) {
+                        activeYear = section.id.replace('year-', '');
+                    }
+                });
+
+                yearLinks.forEach(link => {
+                    const linkYear = link.dataset.year;
+                    if (linkYear === activeYear) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+
+                // If no year is active, activate the first one
+                if (!activeYear && yearLinks.length > 0) {
+                    yearLinks[0].classList.add('active');
+                }
+            }
+
+            // Update on scroll
+            window.addEventListener('scroll', updateActiveYear);
+
+            // Update on load
+            window.addEventListener('load', updateActiveYear);
+
+            // Initial update
+            updateActiveYear();
+        })();
+        </script>
+
+        <div class="videos-count">
+            <p>{{ len $videoPosts }} talks with video recordings</p>
+        </div>
+
+        <div class="videos-grid-list">
+            {{ $totalVideos := len $videoPosts }}
+            {{ range $index, $talk := $videoPosts }}
+                {{ $year := dateFormat "2006" $talk.Params.date }}
+                {{/* Check if this is first of year */}}
+                {{ $isFirstOfYear := true }}
+                {{ if gt $index 0 }}
+                    {{ $prevTalk := index $videoPosts (sub $index 1) }}
+                    {{ $prevYear := dateFormat "2006" $prevTalk.Params.date }}
+                    {{ $isFirstOfYear = ne $year $prevYear }}
+                {{ end }}
+                {{/* Check if this is last of year */}}
+                {{ $isLastOfYear := true }}
+                {{ $nextIndex := add $index 1 }}
+                {{ if lt $nextIndex $totalVideos }}
+                    {{ $nextTalk := index $videoPosts $nextIndex }}
+                    {{ $nextYear := dateFormat "2006" $nextTalk.Params.date }}
+                    {{ $isLastOfYear = ne $year $nextYear }}
+                {{ end }}
+                {{ $cardClass := "video-card" }}
+                {{ if $isFirstOfYear }}{{ $cardClass = printf "%s year-first" $cardClass }}{{ end }}
+                {{ if $isLastOfYear }}{{ $cardClass = printf "%s year-last" $cardClass }}{{ end }}
+            <article class="{{ $cardClass }}" {{ if $isFirstOfYear }}id="year-{{ $year }}"{{ end }}>
+                {{ if $isFirstOfYear }}
+                <div class="year-badge">// {{ $year }}</div>
+                {{ end }}
+                <a href="{{ .Permalink }}#video" class="video-card-link">
+                    {{ with .Params.image }}
+                    <div class="video-card-thumbnail">
+                        {{ partial "responsive-image.html" (dict "src" . "alt" $.Title "class" "video-thumb-img") }}
+                        <div class="video-play-overlay">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                    {{ end }}
+
+                    <div class="video-card-info">
+                        <h2 class="video-card-title">{{ .Title }}</h2>
+
+                        <div class="video-card-meta">
+                            {{ with .Params.event }}<span class="video-card-event">{{ . }}</span>{{ end }}
+                            {{ with .Date }}<time class="video-card-date">{{ dateFormat "Jan 2, 2006" . }}</time>{{ end }}
+                            {{ with .Params.location }}<span class="video-card-location">{{ . }}</span>{{ end }}
+                        </div>
+
+                        {{/* Show video resources */}}
+                        {{ range .Params.resources }}
+                            {{ $url := .url }}
+                            {{ if or (in $url "youtube.com/watch") (in $url "youtu.be/") (in $url "vimeo.com/") (in $url "videos.confluent.io") }}
+                            <div class="video-card-resource">
+                                <i class="fas fa-video"></i>
+                                <span>{{ .title }}</span>
+                            </div>
+                            {{ end }}
+                        {{ end }}
+                    </div>
+                </a>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

@@ -1,7 +1,6 @@
 ---
 title: "Apache Kafka and ksqlDB in Action: Let’s Build a Streaming Data Pipeline!"
 slug: "apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline-tkl4a1"
-aliases: ["/tkl4a1/apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline"]
 date: 2020-09-23T08:00:00
 event: "Big Data LDN"
 location: "Virtual"
@@ -49,6 +48,11 @@ resources:
   - title: "🚂On Track with Apache Kafka: Building a Streaming Platform solution with Rail Data"
     url: "https://rmoff.dev/oredev19-on-track-with-kafka"
     description: "Apache Kafka and Confluent Platform in Action! Using live streams of rail movement data in all sorts of useful ways for analysis and applications."
+embeds:
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/09Ww5r"></iframe>
 ---
 
 <p>Have you ever thought that you needed to be a programmer to do stream processing and build streaming data pipelines? Think again!

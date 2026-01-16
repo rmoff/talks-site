@@ -134,6 +134,12 @@ def generate_markdown(pres_data, pres_id):
                 'type': 'vimeo',
                 'html': vimeo_html
             })
+        # Add notist video embeds
+        for notist_html in embeds_data.get('notist_video_embeds', []):
+            embeds.append({
+                'type': 'notist_video',
+                'html': notist_html
+            })
 
     # Build front matter (without slides array, with embeds)
     front_matter = {

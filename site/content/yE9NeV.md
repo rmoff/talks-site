@@ -1,7 +1,6 @@
 ---
 title: "From Zero to Hero with Kafka Connect"
 slug: "from-zero-to-hero-with-kafka-connect-yE9NeV"
-aliases: ["/yE9NeV/from-zero-to-hero-with-kafka-connect"]
 date: 2019-06-17T08:00:00
 event: "Berlin Buzzwords 2019"
 location: "Berlin, Germany"
@@ -22,6 +21,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Amazing talk by <a href="https://twitter.com/rmoff?ref_src=twsrc%5Etfw">@rmoff</a> about Kafka Connect at <a href="https://twitter.com/hashtag/bbuzz?src=hash&amp;ref_src=twsrc%5Etfw">#bbuzz</a> very well explained, it was a very interesting talk, <a href="https://t.co/5GR3LKWFfA">pic.twitter.com/5GR3LKWFfA</a></p>&mdash; Alejandro Pérez L. @ #bbuzz (@alexperezl) <a href="https://twitter.com/alexperezl/status/1140650680832659459?ref_src=twsrc%5Etfw">June 17, 2019</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/qCUXNQ"></iframe>
 ---
 
 <p>Integrating Apache Kafka with other systems in a reliable and scalable way is often a key part of a streaming platform. Fortunately, Apache Kafka includes the Connect API that enables streaming integration both in and out of Kafka. Like any technology, understanding its architecture and deployment patterns is key to successful use, as is knowing where to go looking when things aren’t working.</p>

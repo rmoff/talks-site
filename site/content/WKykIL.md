@@ -1,7 +1,6 @@
 ---
 title: "Introduction to ksqlDB"
 slug: "introduction-to-ksqldb-WKykIL"
-aliases: ["/WKykIL/introduction-to-ksqldb"]
 date: 2020-05-13T08:00:00
 event: "LJC Virtual Meetup"
 location: "Virtual"
@@ -44,6 +43,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Time to pop over to London to catch another great presentation by <a href="https://twitter.com/rmoff?ref_src=twsrc%5Etfw">@rmoff</a>, courtesy of the kind folks at the <a href="https://twitter.com/ljcjug?ref_src=twsrc%5Etfw">@ljcjug</a></p>&mdash; Dave Klein (@daveklein) <a href="https://twitter.com/daveklein/status/1260629994394566657?ref_src=twsrc%5Etfw">May 13, 2020</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/hwUJuK"></iframe>
 ---
 
 <p>You’ve got streams of data that you want to process and store? You’ve got events from which you’d like to derive state or build aggregates? And you want to do all of this in a scalable and fault-tolerant manner? It’s just as well that Kafka and ksqlDB exist!</p>

@@ -1,7 +1,6 @@
 ---
 title: "The Changing Face of ETL: Event-Driven Architectures for Data Engineers"
 slug: "the-changing-face-of-etl-event-driven-architectures-for-data-engineers-A4pLsH"
-aliases: ["/A4pLsH/the-changing-face-of-etl-event-driven-architectures-for-data-engineers"]
 date: 2019-10-24T08:00:00
 event: "Code.Talks"
 location: "Hamburg, Germany"
@@ -39,6 +38,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Thanks. Nice Talk.</p>&mdash; Philipp Kübler (@MyFrosch) <a href="https://twitter.com/MyFrosch/status/1187307584598007808?ref_src=twsrc%5Etfw">October 24, 2019</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/QcZlkU"></iframe>
 ---
 
 <p>Data integration in architectures built on static, update-in-place datastores inevitably end up with pathologically high degrees of coupling and poor scalability. This has been the standard practice for decades, as we attempt to build data pipelines on top of databases that do a poor job modeling the fundamental objects that drive our businesses and systems: events.</p>

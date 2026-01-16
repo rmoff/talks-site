@@ -1,7 +1,6 @@
 ---
 title: "No More Silos: Integrating Databases and Apache Kafka"
 slug: "no-more-silos-integrating-databases-and-apache-kafka-gnw8Mf"
-aliases: ["/gnw8Mf/no-more-silos-integrating-databases-and-apache-kafka"]
 date: 2019-10-24T08:00:00
 event: "Code.Talks"
 location: "Hamburg, Germany"
@@ -49,6 +48,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">.<a href="https://twitter.com/rmoff?ref_src=twsrc%5Etfw">@rmoff</a> speaking at <a href="https://twitter.com/hashtag/codetalks?src=hash&amp;ref_src=twsrc%5Etfw">#codetalks</a> about how to escape data silos with <a href="https://twitter.com/apachekafka?ref_src=twsrc%5Etfw">@apachekafka</a>. <a href="https://t.co/6Nuo7GiDXb">pic.twitter.com/6Nuo7GiDXb</a></p>&mdash; René Kerner (@rk3rn3r) <a href="https://twitter.com/rk3rn3r/status/1187278005082755072?ref_src=twsrc%5Etfw">October 24, 2019</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/2wIZct"></iframe>
 ---
 
 <p>Companies new and old are all recognising the importance of a low-latency, scalable, fault-tolerant data backbone, in the form of the Apache Kafka streaming platform. With Kafka, developers can integrate multiple sources and systems, which enables low latency analytics, event-driven architectures and the population of multiple downstream systems.</p>

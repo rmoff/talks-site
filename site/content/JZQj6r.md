@@ -1,7 +1,6 @@
 ---
 title: "Kafka as a Platform: the Ecosystem from the Ground Up"
 slug: "kafka-as-a-platform-the-ecosystem-from-the-ground-up-JZQj6r"
-aliases: ["/JZQj6r/kafka-as-a-platform-the-ecosystem-from-the-ground-up"]
 date: 2020-11-10T08:00:00
 event: "GOTOpia"
 location: "Virtual"
@@ -60,6 +59,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/GOTOpia?src=hash&amp;ref_src=twsrc%5Etfw">#GOTOpia</a> <a href="https://twitter.com/hashtag/speakerselfie?src=hash&amp;ref_src=twsrc%5Etfw">#speakerselfie</a> <a href="https://t.co/jJRIet09zq">pic.twitter.com/jJRIet09zq</a></p>&mdash; Robin Moffatt 🍻🏃🥓 (@rmoff) <a href="https://twitter.com/rmoff/status/1326159518821183488?ref_src=twsrc%5Etfw">November 10, 2020</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/D5H7zG"></iframe>
 ---
 
 <p>Kafka has become a key data infrastructure technology, and we all have at least a vague sense that it is a messaging system, but what else is it? How can an overgrown message bus be getting this much buzz? Well, because Kafka is merely the center of a rich streaming data platform that invites detailed exploration.</p>

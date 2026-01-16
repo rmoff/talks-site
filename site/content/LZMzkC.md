@@ -1,7 +1,6 @@
 ---
 title: "🚂 On Track with Apache Kafka: Building a Streaming ETL solution with Rail Data"
 slug: "on-track-with-apache-kafka-building-a-streaming-etl-solution-with-rail-data-LZMzkC"
-aliases: ["/LZMzkC/on-track-with-apache-kafka-building-a-streaming-etl-solution-with-rail-data"]
 date: 2019-11-05T08:00:00
 event: "Øredev 2019"
 location: "Malmö, Sweden"
@@ -22,6 +21,11 @@ resources:
     url: "http://cnfl.io/slack"
   - title: "📚Free eBooks (including “Kafka: The Definitive Guide”)"
     url: "http://cnfl.io/book-bundle"
+embeds:
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/3krvSb"></iframe>
 ---
 
 <p>As data engineers, we frequently need to build scalable systems working with data from a variety of sources and with various ingest rates, sizes, and formats. This talk takes an in-depth look at how Apache Kafka can be used to provide a common platform on which to build data infrastructure driving both real-time analytics as well as event-driven applications.

@@ -1,0 +1,70 @@
+{{/* Year navigation sidebar - used on homepage, videos, and list pages */}}
+{{ $pages := where .Site.RegularPages "Type" "!=" "videos" }}
+{{ $pages = where $pages "Type" "!=" "list" }}
+{{ $pages = where $pages "Type" "!=" "bio" }}
+{{ $talks := $pages.ByDate }}
+
+{{ $years := slice }}
+{{ range $talks.Reverse }}
+    {{ $year := dateFormat "2006" .Params.date }}
+    {{ if not (in $years $year) }}
+        {{ $years = $years | append $year }}
+    {{ end }}
+{{ end }}
+{{ $years = sort $years "value" "desc" }}
+
+<nav class="year-nav">
+    <div class="year-nav-inner">
+        {{ range $years }}
+        <a href="#year-{{ . }}" class="year-nav-link" data-year="{{ . }}">{{ . }}</a>
+        {{ end }}
+    </div>
+</nav>
+
+<script>
+(function() {
+    const yearNav = document.querySelector('.year-nav-inner');
+    const yearLinks = document.querySelectorAll('.year-nav-link');
+
+    if (!yearNav || yearLinks.length === 0) return;
+
+    function updateActiveYear() {
+        const scrollPos = window.scrollY + 150;
+        let activeYear = null;
+
+        // Find all year sections on the page
+        const yearSections = document.querySelectorAll('[id^="year-"]');
+
+        yearSections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const top = rect.top + window.scrollY;
+            if (scrollPos >= top - 100) {
+                activeYear = section.id.replace('year-', '');
+            }
+        });
+
+        yearLinks.forEach(link => {
+            const linkYear = link.dataset.year;
+            if (linkYear === activeYear) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+        // If no year is active, activate the first one
+        if (!activeYear && yearLinks.length > 0) {
+            yearLinks[0].classList.add('active');
+        }
+    }
+
+    // Update on scroll
+    window.addEventListener('scroll', updateActiveYear);
+
+    // Update on load
+    window.addEventListener('load', updateActiveYear);
+
+    // Initial update
+    updateActiveYear();
+})();
+</script>

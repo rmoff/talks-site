@@ -1,7 +1,6 @@
 ---
 title: "🤖 Building a Telegram bot with Apache Kafka, Go, and ksqlDB"
 slug: "building-a-telegram-bot-with-apache-kafka-go-and-ksqldb-AIv0A7"
-aliases: ["/AIv0A7/building-a-telegram-bot-with-apache-kafka-go-and-ksqldb"]
 date: 2021-03-10T08:00:00
 event: "Blueprint LDN"
 location: "Virtual"
@@ -26,6 +25,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/SpeakerSelfie?src=hash&amp;ref_src=twsrc%5Etfw">#SpeakerSelfie</a> <a href="https://twitter.com/LDN_Blueprint?ref_src=twsrc%5Etfw">@LDN_Blueprint</a> <a href="https://t.co/0j1hIJGOlI">pic.twitter.com/0j1hIJGOlI</a></p>&mdash; Robin Moffatt 🍻🏃🥓 (@rmoff) <a href="https://twitter.com/rmoff/status/1369616533283086339?ref_src=twsrc%5Etfw">March 10, 2021</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/97noGf"></iframe>
 ---
 
 <p>Imagine you’ve got a stream of data; it’s not “big data,” but it’s certainly a lot. Within the data, you’ve got some bits you’re interested in, and of those bits, you’d like to be able to query information about them at any point. Sounds fun, right? Since I mentioned “querying,” I’d hazard a guess that you’ve got in mind an additional datastore of some sort, whether relational or NoSQL.</p>

@@ -1,7 +1,6 @@
 ---
 title: "Kafka as a Platform: the Ecosystem from the Ground Up"
 slug: "kafka-as-a-platform-the-ecosystem-from-the-ground-up-VLXz8e"
-aliases: ["/VLXz8e/kafka-as-a-platform-the-ecosystem-from-the-ground-up"]
 date: 2021-03-17T08:00:00
 event: "London Microservices Meetup"
 location: "Virtual"

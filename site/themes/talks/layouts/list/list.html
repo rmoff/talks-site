@@ -1,0 +1,53 @@
+{{ define "main" }}
+{{ partial "hero-section.html" . }}
+{{ partial "year-nav.html" . }}
+
+<div class="list-page">
+    <div class="list-container">
+        {{/* Get all pages from content directory except special pages */}}
+        {{ $pages := where .Site.RegularPages "Type" "!=" "videos" }}
+        {{ $pages = where $pages "Type" "!=" "list" }}
+        {{ $pages = where $pages "Type" "!=" "bio" }}
+        {{/* Sort by date, newest first */}}
+        {{ $pages = sort $pages ".Date" "desc" }}
+
+        <div class="list-count">
+            <p>{{ len $pages }} talks total</p>
+        </div>
+
+        {{/* Group by year */}}
+        {{ range $pages.GroupByDate "2006" }}
+        <div class="list-year-section" id="year-{{ .Key }}">
+            <h2 class="list-year-heading">{{ .Key }}</h2>
+
+            <ul class="talks-list">
+                {{ range .Pages }}
+                <li class="talk-list-item">
+                    <a href="{{ .Permalink }}" class="talk-list-link">
+                        <div class="talk-list-main">
+                            <h3 class="talk-list-title">{{ .Title }}</h3>
+                            <div class="talk-list-meta">
+                                {{ with .Params.event }}<span class="talk-list-event">{{ . }}</span>{{ end }}
+                                {{ with .Date }}<time class="talk-list-date">{{ dateFormat "Jan 2, 2006" . }}</time>{{ end }}
+                                {{ with .Params.location }}<span class="talk-list-location">{{ . }}</span>{{ end }}
+                            </div>
+                        </div>
+                        <div class="talk-list-icons">
+                            {{ if .Params.pdf }}<i class="fas fa-file-pdf" title="PDF Available"></i>{{ end }}
+                            {{ range .Params.resources }}
+                                {{ $url := .url }}
+                                {{ if or (in $url "youtube.com/watch") (in $url "youtu.be/") (in $url "vimeo.com/") (in $url "videos.confluent.io") }}
+                                <i class="fas fa-video" title="Video Available"></i>
+                                {{ end }}
+                            {{ end }}
+                            {{ if .Params.embeds }}<i class="fas fa-comments" title="Social Media"></i>{{ end }}
+                        </div>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

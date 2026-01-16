@@ -1,13 +1,17 @@
 ---
 title: "Apache Kafka and KSQL in Action : Let’s Build a Streaming Data Pipeline!"
 slug: "apache-kafka-and-ksql-in-action-lets-build-a-streaming-data-pipeline-5dqGLs"
-aliases: ["/5dqGLs/apache-kafka-and-ksql-in-action-lets-build-a-streaming-data-pipeline"]
 date: 2018-10-29T08:00:00
 event: "LISA 18"
 location: "Nashville, TN, USA"
 image: "/images/5dqGLs/slide_000.jpg"
 pdf: "/pdfs/5dqGLs.pdf"
 notist_id: "5dqGLs"
+embeds:
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/YH1XLl"></iframe>
 ---
 
 <p>Have you ever thought that you needed to be a programmer to do stream processing and build streaming data pipelines? Think again!</p>

@@ -1,7 +1,6 @@
 ---
 title: "Apache Kafka and KSQL in Action : Let’s Build a Streaming Data Pipeline!"
 slug: "apache-kafka-and-ksql-in-action-lets-build-a-streaming-data-pipeline-pZC6Za"
-aliases: ["/pZC6Za/apache-kafka-and-ksql-in-action-lets-build-a-streaming-data-pipeline"]
 date: 2019-05-08T08:00:00
 event: "Devoxx UK"
 location: "London, UK"
@@ -16,6 +15,11 @@ resources:
     url: "http://cnfl.io/slack"
   - title: "📚Free eBooks (including “Kafka: The Definitive Guide”)"
     url: "https://www.confluent.io/apache-kafka-stream-processing-book-bundle"
+embeds:
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/KAZfGn"></iframe>
 ---
 
 <p>Have you ever thought that you needed to be a programmer to do stream processing and build streaming data pipelines? Think again! Apache Kafka is a distributed, scalable, and fault-tolerant streaming platform, providing low-latency pub-sub messaging coupled with native storage and stream processing capabilities. Integrating Kafka with RDBMS, NoSQL, and object stores is simple with Kafka Connect, which is part of Apache Kafka. KSQL is the open-source SQL streaming engine for Apache Kafka, and makes it possible to build stream processing applications at scale, written using a familiar SQL interface.</p>

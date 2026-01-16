@@ -1,7 +1,6 @@
 ---
 title: "QCon Workshop: Apache Kafka and KSQL in Action : Let’s Build a Streaming Data Pipeline!"
 slug: "qcon-workshop-apache-kafka-and-ksql-in-action-lets-build-a-streaming-data-pipeline-xg4tei"
-aliases: ["/xg4tei/qcon-workshop-apache-kafka-and-ksql-in-action-lets-build-a-streaming-data-pipeline"]
 date: 2019-03-07T08:00:00
 event: "QCon London"
 location: "London, UK"

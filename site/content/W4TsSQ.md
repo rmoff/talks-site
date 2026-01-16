@@ -1,7 +1,6 @@
 ---
 title: "Kafka as a Platform: the Ecosystem from the Ground Up"
 slug: "kafka-as-a-platform-the-ecosystem-from-the-ground-up-W4TsSQ"
-aliases: ["/W4TsSQ/kafka-as-a-platform-the-ecosystem-from-the-ground-up"]
 date: 2020-09-23T08:00:00
 event: "Budapest Data Forum"
 location: "Budapest, Hungary"

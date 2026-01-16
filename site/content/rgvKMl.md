@@ -1,7 +1,6 @@
 ---
 title: "I’m not a YouTuber; come and learn how you can not be one too"
 slug: "im-not-a-youtuber-come-and-learn-how-you-can-not-be-one-too-rgvKMl"
-aliases: ["/rgvKMl/im-not-a-youtuber-come-and-learn-how-you-can-not-be-one-too"]
 date: 2020-05-27T08:00:00
 event: "DevRel Meetup"
 location: "Virtual"
@@ -18,4 +17,9 @@ resources:
   - title: "Unsplash"
     url: "https://unsplash.com"
     description: "Excellent source of freely-usable images."
+embeds:
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/OX02bD"></iframe>
 ---

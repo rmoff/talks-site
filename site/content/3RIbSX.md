@@ -1,7 +1,6 @@
 ---
 title: "Apache Kafka and ksqlDB in Action: Let’s Build a Streaming Data Pipeline!"
 slug: "apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline-3RIbSX"
-aliases: ["/3RIbSX/apache-kafka-and-ksqldb-in-action-lets-build-a-streaming-data-pipeline"]
 date: 2021-06-24T08:00:00
 event: "Apache Kafka meetup"
 location: "Virtual"
@@ -15,6 +14,11 @@ resources:
   - title: "👾 Demo code"
     url: "https://github.com/confluentinc/demo-scene/blob/master/build-a-streaming-pipeline/"
     description: "Try out the demo for yourself - all you need is Docker"
+embeds:
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/kYOY7N"></iframe>
 ---
 
 <p>Have you ever thought that you needed to be a programmer to do stream processing and build streaming data pipelines? Think again!</p>

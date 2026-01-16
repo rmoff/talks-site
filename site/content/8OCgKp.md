@@ -1,7 +1,6 @@
 ---
 title: "Kafka as a Platform: the Ecosystem from the Ground Up"
 slug: "kafka-as-a-platform-the-ecosystem-from-the-ground-up-8OCgKp"
-aliases: ["/8OCgKp/kafka-as-a-platform-the-ecosystem-from-the-ground-up"]
 date: 2020-09-15T08:00:00
 event: "GOTOpia"
 location: "Virtual"
@@ -57,6 +56,10 @@ embeds:
   - type: "twitter"
     html: |
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/GOTOpia?src=hash&amp;ref_src=twsrc%5Etfw">#GOTOpia</a> have a neat idea to try and make a virtual conf more than just a series of Zoom meetings - a VR world modelled after <a href="https://twitter.com/codenodeuk?ref_src=twsrc%5Etfw">@codenodeuk</a> to walk around and see the session &quot;rooms&quot; and sponsor booths :) <a href="https://t.co/uRSlPPISmf">pic.twitter.com/uRSlPPISmf</a></p>&mdash; Robin Moffatt 🍻🏃🥓 (@rmoff) <a href="https://twitter.com/rmoff/status/1306186510992113664?ref_src=twsrc%5Etfw">September 16, 2020</a></blockquote>
+  - type: "notist_video"
+    html: |
+      <iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen class="embedded-deck embedded-video"
+                          src="https://notist.ninja/embed/8h6lip"></iframe>
 ---
 
 <p>Kafka has become a key data infrastructure technology, and we all have at least a vague sense that it is a messaging system, but what else is it? How can an overgrown message bus be getting this much buzz? Well, because Kafka is merely the center of a rich streaming data platform that invites detailed exploration.</p>
