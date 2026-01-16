@@ -35,9 +35,14 @@
         <div class="talk-slides-section">
             {{ with .Params.pdf }}
             {{ $pdfUrl := replaceRE "^/pdfs/" "https://archive.org/download/rmoff-conference-talks/" . }}
-            <div class="pdf-viewer">
-                <div class="pdf-iframe-container">
-                    <iframe class="pdf-iframe" src="{{ $pdfUrl }}"></iframe>
+            <div class="pdf-viewer" data-pdf-url="{{ $pdfUrl }}">
+                <div class="pdf-container">
+                    <div class="pdf-thumbnail">
+                        {{ with $.Params.image }}
+                        {{ partial "responsive-image.html" (dict "src" . "alt" $.Title "class" "pdf-thumbnail-image" "loading" "eager") }}
+                        {{ end }}
+                        <button class="pdf-view-button">View slides</button>
+                    </div>
                 </div>
                 <div class="pdf-download-link">
                     <a href="{{ $pdfUrl }}" target="_blank"><i class="fas fa-download"></i> Download PDF</a>

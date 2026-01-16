@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?v=10">
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?v=15">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "index.xml" | absURL }}">
     {{ block "head_extra" . }}{{ end }}
@@ -27,5 +27,26 @@
     <!-- Twitter widgets script to render embedded tweets -->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+    <!-- Click to load PDF -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.pdf-viewer').forEach(function(viewer) {
+            const pdfUrl = viewer.dataset.pdfUrl;
+            const container = viewer.querySelector('.pdf-container');
+            const thumbnail = viewer.querySelector('.pdf-thumbnail');
+            const playBtn = viewer.querySelector('.pdf-view-button');
+
+            if (playBtn && pdfUrl) {
+                playBtn.addEventListener('click', function() {
+                    const iframe = document.createElement('iframe');
+                    iframe.src = pdfUrl;
+                    iframe.className = 'pdf-iframe';
+                    thumbnail.style.display = 'none';
+                    container.appendChild(iframe);
+                });
+            }
+        });
+    });
+    </script>
 </body>
 </html>
